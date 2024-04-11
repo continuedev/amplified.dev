@@ -1,0 +1,3 @@
+# Filtering
+
+The filtering component filters for suggestions that are low quality, insecure, or raise licensing concerns. It sometimes even asks for a new suggestion automatically. While the most common use case is to block suggestions matching public code, developers are also exploring filtering to make sure that suggestions can compile, pass a linter, pass tests, only use certain libraries, etc. before being shown to the user.
