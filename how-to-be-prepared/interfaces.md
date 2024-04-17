@@ -1,6 +1,6 @@
 # 5. Adopt open-source interfaces
 
-If we want developers to be amplified, we need to standardize around interfaces (i.e. IDE extensions today), so that an open an ecosystem can emerge within and across organizations.
+Amplified developers need to standardized interfaces (i.e. IDE extensions today), so that an open an ecosystem can emerge within and across organizations.
 
 **Actions to take now**
 

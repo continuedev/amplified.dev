@@ -1,6 +1,6 @@
 # 4. Standardize permissions and integrations
 
-If we want developers to be amplified, they need to have clear guidance about how data should flow into and out of the AI software development system.
+Amplified developers need to have clear guidance about how data should flow into and out of the AI software development system.
 
 **Actions to take now**
 
