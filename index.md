@@ -40,11 +40,11 @@ We are seeing many more organizations head down the same path. Similar to when D
 
 While there’s definitely some work required to set up a good system, you can expect its value to increase over time, so start early! The organizations that find the most success will create the right set of initial conditions:
 
-1. [Establish a modular, architecture of participation](./how-to-be-prepared/architecture.md)
+1. [Establish an architecture of participation](./how-to-be-prepared/architecture.md)
 2. [Enable the right models for the job](./how-to-be-prepared/models.md)
 3. [Measure and improve system metrics](./how-to-be-prepared/metrics.md)
 4. [Standardize permissions and integrations](./how-to-be-prepared/integrations.md)
-5. [Adopt open-source, local-first interfaces](./how-to-be-prepared/interfaces.md)
+5. [Adopt open-source interfaces](./how-to-be-prepared/interfaces.md)
 
 ## Conclusion
 
