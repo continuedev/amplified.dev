@@ -46,7 +46,7 @@ While there’s definitely some work required to set up a good system, you can e
 
 ### 1. Establish an architecture of participation
 
-Amplfied developers need not only to use AI software development systems but to be actively involved in their improvement.
+Amplified developers use AI software development systems and are actively involved in improving them.
 
 **Actions to take now**
 
@@ -61,7 +61,7 @@ But this is only possible if each developer has the opportunity to participate i
 
 ### 2. Enable the right models for the job
 
-Amplified developers need freedom to use and reuse the right models and components to automate tasks.
+Amplified developers need the freedom to use and reuse the right models and components to automate tasks.
 
 **Actions to take now**
 
@@ -96,7 +96,7 @@ The reason this is necessary is because each of us has our own definition of the
 
 ### 4. Standardize permissions and integrations
 
-Amplified developers need to have clear guidance about how data should flow into and out of the AI software development system.
+Amplified developers need clear guidance about how data should flow into and out of the AI software development system.
 
 **Actions to take now**
 
@@ -113,7 +113,7 @@ Best practices from web apps and DevOps apply here too. Permissions and integrat
 
 ### 5. Adopt open-source interfaces
 
-Amplified developers need to standardize around interfaces (i.e. IDE extensions today), so that an open an ecosystem can emerge within and across organizations.
+Amplified developers need standardized interfaces (i.e. IDE extensions today), so that an open an ecosystem can emerge within and across organizations.
 
 **Actions to take now**
 
