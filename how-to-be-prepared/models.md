@@ -1,6 +1,6 @@
 # 2. Enable the right models for the job
 
-Amplified developers need to have the freedom to use and reuse the right models and components to automate tasks in their job.
+Amplified developers need the freedom to use and reuse the right models and components to automate tasks in their job.
 
 **Actions to take now**
 

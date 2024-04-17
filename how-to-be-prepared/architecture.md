@@ -1,6 +1,6 @@
 # 1. Establish a modular, architecture of participation
 
-Amplified developers need to not only use AI software development systems but also be actively involved in their improvement too.
+Amplified developers use AI software development systems and are actively involved in improving them.
 
 **Actions to take now**
 
