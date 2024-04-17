@@ -1,6 +1,6 @@
 # 3. Measure and improve system metrics
 
-If we want developers to be amplified, they need to understand how the AI software development system works and know if changes they make to it lead to better outcomes or not.
+Amplified developers must understand how the AI software development system works and have the information to decide if their changes lead to better outcomes or not. 
 
 **Actions to take now**
 
