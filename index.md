@@ -1,12 +1,10 @@
-# Towards a future of amplified developers
-
 > We believe in a future where developers are amplified, not automated
 
 ## Introduction
 
-In the era of [Large Language Models (LLMs)](https://www.youtube.com/watch?v=zjkBMFhNj_g), software development is becoming increasingly automated by AI copilots. Many folks are already forecasting that AI will replace developers in as little as a few years, while investors declare the arrival of superhuman AI software engineers. This has scared some developers, annoyed others, and overall increased our collective anxiety.
+In the era of [Large Language Models (LLMs)](https://www.youtube.com/watch?v=zjkBMFhNj_g), software development is becoming increasingly automated by AI copilots. Many folks are forecasting that AI will replace developers in as little as a few years, while investors declare the arrival of superhuman AI software engineers. This has scared some developers, annoyed others, and overall increased our collective anxiety.
 
-Our motivation with `amplified.dev` is to instead 1) empower developers and 2) raise awareness of some systemic issues that we’ve seen in how engineering organizations are adopting, using, and evolving AI software development systems.
+Our motivation with `amplified.dev` is to instead 1) empower developers and 2) raise awareness of systemic issues we’ve seen in how engineering organizations are adopting, using, and evolving AI software development systems.
 
 Our hope is that, over time, we can find a shared vocabulary for discussing these problems. For now, we describe the [current state of the world](#where-we-are-today), [where we are heading](#where-we-are-heading), and [what amplified developers need their organizations to do today](#amplified-developers):
 
@@ -22,8 +20,8 @@ What we call “AI copilots” are much more than a single LLM. As the Berkeley 
 
 As more of software development is automated, we are seeing more human engineering time go into monitoring, maintaining, and improving the different components that make up AI software development systems. That said, most copilots to date have been black box, SaaS solutions with roughly the same components, which you often have little to no ability to understand or improve.
 
-- ["Tab" model](./where-we-are-today/tab.md)
-- ["Chat" model](./where-we-are-today/chat.md)
+- [Tab model](./where-we-are-today/tab.md)
+- [Chat model](./where-we-are-today/chat.md)
 - [Local context engine](./where-we-are-today/local.md)
 - [Server context engine](./where-we-are-today/server.md)
 - [Filtering](./where-we-are-today/filtering.md)
@@ -32,23 +30,23 @@ As more of software development is automated, we are seeing more human engineeri
 
 Among the changes on the horizon are two new components (async engines and training engines) and three trends that are likely to expand the standard AI software development system (further specialized models, better toolchain integrations, and increasingly modular systems).
 
-- [Async engine](./where-we-are-heading/async.md)
-- [Training engine](./where-we-are-heading/training.md)
+- [Async engines](./where-we-are-heading/async.md)
+- [Training engines](./where-we-are-heading/training.md)
 - [Trends](./where-we-are-heading/trends.md)
 
-AI software development systems are evolving quickly. In order to avoid vendor lock-in, keep up as new components emerge, and customize your AI dev system to your specific needs, you need an approach that gives you freedom and flexibility into the future.
+AI software development systems are evolving quickly. In order to avoid vendor lock-in, keep up as new components emerge, and customize your AI dev system to your specific needs, you need an approach that enables freedom and flexibility.
 
 ## Amplified developers
 
-The companies at the frontier like [Google](https://blog.research.google/2023/05/large-sequence-models-for-software.html), [Meta](https://arxiv.org/abs/2402.09171), [Nvidia](https://research.nvidia.com/publication/2023-10_chipnemo-domain-adapted-llms-chip-design), [Airbnb](https://youtu.be/_kV7fUVGz9E?si=9YWu-UQGE6CuPeuM), and [Uber](https://youtu.be/zQ5e3B5I-U0?si=UNtJo3DDxhrZBoE5) have platform development teams that create their own AI software development systems. We are seeing many more organizations head down the same path. 
+Companies at the frontier like [Google](https://blog.research.google/2023/05/large-sequence-models-for-software.html), [Meta](https://arxiv.org/abs/2402.09171), [Nvidia](https://research.nvidia.com/publication/2023-10_chipnemo-domain-adapted-llms-chip-design), [Airbnb](https://youtu.be/_kV7fUVGz9E?si=9YWu-UQGE6CuPeuM), and [Uber](https://youtu.be/zQ5e3B5I-U0?si=UNtJo3DDxhrZBoE5) have platform development teams that create their own AI software development systems. We are seeing many more organizations head down the same path.
 
-Similar to when DevOps was known as “web operations”, we are in the early days of creating and standardizing workflows and tools. As we converge on best practices, platform development teams are positioning themselves to establish AI software development systems as a key aspect of their initiatives to improve developer experience.
+Similar to when DevOps was known as “web operations”, we are in the early days of creating and standardizing workflows and tools. As we converge on best practices, platform development teams are establishing AI software development systems as a key aspect of their initiatives to improve developer experience.
 
 While there’s definitely some work required to set up a good system, you can expect its value to increase over time, so start early! The organizations that find the most success will create the right set of initial conditions:
 
 ### 1. Establish an architecture of participation
 
-Amplfied developers need to not only use AI software development systems but also be actively involved in their improvement too.
+Amplfied developers need not only to use AI software development systems but to be actively involved in their improvement.
 
 **Actions to take now**
 
@@ -59,11 +57,11 @@ Amplfied developers need to not only use AI software development systems but als
 
 Like DevOps, this is a practice that requires the whole team. You need to make sure to design your AI software development system with an [architecture of participation](https://web.archive.org/web/20120208001626/http://www.oreillynet.com/pub/a/oreilly/tim/articles/architecture_of_participation.html) in mind. When anyone on your team gets a wrong / bad suggestion from the system, they should be able to do something about it. This is critical because these systems are so often wrong today.
 
-But this is only possible if each developer has the opportunity and ability to participate in the creation and maintenance of the system. If this true, then over time, the system will increasingly help construct and maintain the software you create within your organization, while the developers who previously did that work shift more time to working on the system itself.
+But this is only possible if each developer has the opportunity to participate in the creation and maintenance of the system. If this true, then over time, the system will increasingly help construct and maintain the software you create within your organization, while the developers who previously did that work shift more time to working on the system itself.
 
 ### 2. Enable the right models for the job
 
-Amplified developers need to have the freedom to use and reuse the right models and components to automate tasks in their job.
+Amplified developers need freedom to use and reuse the right models and components to automate tasks.
 
 **Actions to take now**
 
@@ -74,11 +72,11 @@ Amplified developers need to have the freedom to use and reuse the right models 
 
 Situations and environments vary so much that developers are going to need figure out how to balance speed, quality, cost, and other constraints when automating part of their job. To do this, they need to be able to know about the models they are using and have choice over when, where, and how to use them.
 
-The state-of-the-art is moving so fast that even models released six months ago can be outdated, so you don’t want to be locked into any particular vendor. You want to be able to constantly swap out and try different models. Empowering developers in this way will set them to use the specific model best suited to each task (e.g. autocomplete, chat, re-rank, embed, etc)
+The state-of-the-art is moving so fast that even models released six months ago can be outdated, so you don’t want to be locked into any particular vendor. You want to be able to constantly swap out and try different models. Empowering developers in this way will set them up to use the specific model best suited to each task (e.g. autocomplete, chat, re-rank, embed, etc.)
 
 ### 3. Measure and improve system metrics
 
-Amplified developers need to understand how the AI software development system works and have the information to decide if their changes lead to better outcomes or not.
+Amplified developers need to understand how the AI software development system works and have the information to decide whether their changes lead to better outcomes.
 
 **Actions to take now**
 
@@ -90,7 +88,7 @@ Amplified developers need to understand how the AI software development system w
 
 Your system will likely not be the best when you first stand it up, but if you collect data, you will set yourself up to improve it over time. You’ll also be able to show the value / ROI / positive impact on productivity. This will set you up to get more budget and resources from your organization for future system investments.
 
-When you use LLMs while coding, you create development data that shows the step-by-step process a developer takes to complete a task, the context a developer uses to decide what to do at each step, and natural language that explains the reasoning behind the steps. It’s data on how you build software—the stuff that happens in between Git commits, which is created as a by-product of using LLMs while coding.
+When you use LLMs while coding, you generate development data that shows the step-by-step process taken to complete a task, the context used to decide what to do at each step, and natural language that explains the reasoning behind the steps. It’s data on how you build software—the stuff that happens in between Git commits, which is created as a by-product of using LLMs while coding.
 
 If vendors collect your data without at least giving you access to it, they are likely not a good fit. AI models are as good at coding as they are because developers made their code publicly available on GitHub, and you being able to keep your development data is going to be critical for your ability to understand and improve your AI software development system in the future.
 
@@ -137,4 +135,4 @@ All in all, each of us will need to actively participate in the construction and
 
 If we put our energy into crafting the right AI software development systems in the right way, developers will be amplified, instead of being automated. Perhaps one day all developers will do is sit around a table discussing where to point their AI software development system next. But, for now, we have a lot of work to do to head towards that!
 
-*If you believe in a future where developers are amplified, join us by adding your name and opening a pull request [here](https://github.com/continuedev/amplified.dev/edit/main/authors.md).*
+_If you believe in a future where developers are amplified, join us by adding your name and opening a pull request [here](https://github.com/continuedev/amplified.dev/edit/main/authors.md)._
