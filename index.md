@@ -1,14 +1,20 @@
 # Towards a future of amplified developers
 
+> We believe in a future where developers are amplified, not automated
+
 ## Introduction
 
-We believe in a future where developers are amplified, not automated.
+In the era of [Large Language Models (LLMs)](https://www.youtube.com/watch?v=zjkBMFhNj_g), software development is becoming increasingly automated by AI copilots. Many folks are already forecasting that AI will replace developers in as little as a few years, while investors declare the arrival of superhuman AI software engineers. This has scared some developers, annoyed others, and overall increased our collective anxiety.
 
-In the era of [Large Language Models (LLMs)](https://www.youtube.com/watch?v=zjkBMFhNj_g), software development is becoming increasingly automated by AI copilots. Many folks are already forecasting that AI will replace developers in as little as a few years, while investors declare the arrival of superhuman AI software engineers.
+Our motivation with `amplified.dev` is to instead 1) empower developers and 2) raise awareness of some systemic issues that we’ve seen in how engineering organizations are adopting, using, and evolving AI software development systems.
 
-Our motivation is to 1) spark a counter narrative that empowers developers instead of scaring or annoying them and 2) raise awareness of some systemic issues that we’ve seen in how engineering organizations are adopting, using, and evolving AI software development systems.
+Our hope is that, over time, we can find a shared vocabulary for discussing these problems. For now, we describe the [current state of the world](#where-we-are-today), [where we are heading](#where-we-are-heading), and [what amplified developers need their organizations to do today](#amplified-developers):
 
-Our hope is that, over time, we can find a shared vocabulary for discussing these problems. For now, we describe the [current state of the world](#where-we-are-today), [where we are heading](#where-we-are-heading), and [how you can advocate for an AI software development system that leads to amplified developers at your organization](#how-to-be-prepared).
+1. [Establish an architecture of participation](#1-establish-an-architecture-of-participation)
+2. [Enable the right models for the job](#2-enable-the-right-models-for-the-job)
+3. [Measure and improve system metrics](#3-measure-and-improve-system-metrics)
+4. [Standardize permissions and integrations](#4-standardize-permissions-and-integrations)
+5. [Adopt open-source interfaces](#5-adopt-open-source-interfaces)
 
 ## Where we are today
 
@@ -32,11 +38,11 @@ Among the changes on the horizon are two new components (async engines and train
 
 AI software development systems are evolving quickly. In order to avoid vendor lock-in, keep up as new components emerge, and customize your AI dev system to your specific needs, you need an approach that gives you freedom and flexibility into the future.
 
-## Amplfied developers
+## Amplified developers
 
-The companies at the frontier like [Google](https://blog.research.google/2023/05/large-sequence-models-for-software.html), [Meta](https://arxiv.org/abs/2402.09171), [Nvidia](https://research.nvidia.com/publication/2023-10_chipnemo-domain-adapted-llms-chip-design), [Airbnb](https://youtu.be/_kV7fUVGz9E?si=9YWu-UQGE6CuPeuM), and [Uber](https://youtu.be/zQ5e3B5I-U0?si=UNtJo3DDxhrZBoE5) have platform development teams that create their own AI software development systems, which includes buying components from vendors when it makes sense.
+The companies at the frontier like [Google](https://blog.research.google/2023/05/large-sequence-models-for-software.html), [Meta](https://arxiv.org/abs/2402.09171), [Nvidia](https://research.nvidia.com/publication/2023-10_chipnemo-domain-adapted-llms-chip-design), [Airbnb](https://youtu.be/_kV7fUVGz9E?si=9YWu-UQGE6CuPeuM), and [Uber](https://youtu.be/zQ5e3B5I-U0?si=UNtJo3DDxhrZBoE5) have platform development teams that create their own AI software development systems. We are seeing many more organizations head down the same path. 
 
-We are seeing many more organizations head down the same path. Similar to when DevOps was known as “web operations”, we are in the early days of creating and standardizing workflows and tools. As we converge on best practices, platform development teams are positioning themselves to establish AI software development systems as a key aspect of their initiatives to improve developer experience.
+Similar to when DevOps was known as “web operations”, we are in the early days of creating and standardizing workflows and tools. As we converge on best practices, platform development teams are positioning themselves to establish AI software development systems as a key aspect of their initiatives to improve developer experience.
 
 While there’s definitely some work required to set up a good system, you can expect its value to increase over time, so start early! The organizations that find the most success will create the right set of initial conditions:
 
@@ -46,7 +52,7 @@ Amplfied developers need to not only use AI software development systems but als
 
 **Actions to take now**
 
-- Commit to amplifying instead of automating developers and tell your team
+- Commit to a future where developers are amplified and tell your team
 - Ensure your AI dev system is modular and designed for user contribution
 - Set up a sustainable way to configure and roll out updates to your team
 - Make it easy to share prompts, context providers, slash commands, etc.
@@ -72,7 +78,7 @@ The state-of-the-art is moving so fast that even models released six months ago 
 
 ### 3. Measure and improve system metrics
 
-Amplified developers need to understand how the AI software development system works and know if changes they make to it lead to better outcomes or not.
+Amplified developers need to understand how the AI software development system works and have the information to decide if their changes lead to better outcomes or not.
 
 **Actions to take now**
 
@@ -114,10 +120,10 @@ Amplified developers need to standardize around interfaces (i.e. IDE extensions 
 **Actions to take now**
 
 - Educate developers on your team about development data
-- Push for other organizations to also standardize on the same interfaces
 - Roll out open-source interfaces to your team
+- Push for other organizations to also standardize on the same interfaces
 
-We aim for the interface between developers and AI to be open source. This enables all of us to 1) build an open ecosystem of components decoupled from the interface and 2) ensure that data emitted by the interface, which will be used to make increasingly capable models for software development, is pooled and directed by its owners rather than being collected and monopolized by a centralized, closed-source interface.
+The interface between developers and AI should be open source. This enables all of us to 1) build an open ecosystem of components decoupled from the interface and 2) ensure that data emitted by the interface, which will be used to make increasingly capable models for software development, is pooled and directed by its owners rather than being collected and monopolized by a centralized, closed-source interface.
 
 Today, this interface is often in the form of an IDE extension that likely includes a GUI, prompts, basic retrieval systems, configuration, and abstractions that allow you to plug in other components (e.g. your own RAG system). Much like Docker, Linux, and Git, the interface between developers and AI is so critical that we believe it will ultimately be public infrastructure.
 
