@@ -6,7 +6,7 @@ In the era of [Large Language Models (LLMs)](https://www.youtube.com/watch?v=zjk
 
 Our motivation with `amplified.dev` is to instead 1) empower developers and 2) raise awareness of systemic issues we’ve seen in how engineering organizations are adopting, using, and evolving AI software development systems.
 
-Our hope is that, over time, we can find a shared vocabulary for discussing these problems. For now, we describe the [current state of the world](#where-we-are-today), [where we are heading](#where-we-are-heading), and [what amplified developers need their organizations to do today](#amplified-developers):
+Our hope is that, over time, we can find a shared vocabulary for discussing these problems. For now, we describe the [current state of the world](#where-we-are-today), [where we are heading](#where-we-are-heading), and [what amplified developers need to do at their organizations today](#amplified-developers):
 
 1. [Establish an architecture of participation](#1-establish-an-architecture-of-participation)
 2. [Enable the right models for the job](#2-enable-the-right-models-for-the-job)
