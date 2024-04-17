@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In the era of [Large Language Models (LLMs)](https://www.youtube.com/watch?v=zjkBMFhNj_g), software development is becoming increasingly automated by AI copilots. Many folks are forecasting that AI will replace developers in as little as a few years, while investors declare the arrival of superhuman AI software engineers. This has scared some developers, annoyed others, and overall increased our collective anxiety.
+In the era of [Large Language Models (LLMs)](https://www.youtube.com/watch?v=zjkBMFhNj_g), software development is becoming increasingly automated by AI copilots. Many folks are forecasting that AI will replace developers in as little as a few years, while investors declare the arrival of superhuman AI software engineers. This worries some developers and annoys others.
 
 Our motivation with `amplified.dev` is to instead 1) empower developers and 2) raise awareness of systemic issues we’ve seen in how engineering organizations are adopting, using, and evolving AI software development systems.
 
@@ -90,7 +90,7 @@ Your system will likely not be the best when you first stand it up, but if you c
 
 When you use LLMs while coding, you generate development data that shows the step-by-step process taken to complete a task, the context used to decide what to do at each step, and natural language that explains the reasoning behind the steps. It’s data on how you build software—the stuff that happens in between Git commits, which is created as a by-product of using LLMs while coding.
 
-If vendors collect your data without at least giving you access to it, they are likely not a good fit. AI models are as good at coding as they are because developers made their code publicly available on GitHub, and you being able to keep your development data is going to be critical for your ability to understand and improve your AI software development system in the future.
+The ability to collect this data is critical. AI models are as good at coding as they are because developers made their code publicly available on GitHub, and you being able to keep your development data is going to be critical for your ability to understand and improve your AI software development system in the future.
 
 The reason this is necessary is because each of us has our own definition of the right way to build software. To gain mass adoption, the AI systems that we use to build software need to not only respect this but also reflect it. When suggestions we get from AI systems do not meet [our definition of the right way to build software](https://joshcollinsworth.com/blog/copilot), we need to be able to [improve them](https://blog.continue.dev/improve-code-suggestions/).
 
