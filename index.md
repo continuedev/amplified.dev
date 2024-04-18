@@ -1,6 +1,4 @@
-> We believe in a future where developers are amplified, not automated
-
-## Introduction
+## We believe in a future where developers are amplified, not automated
 
 In the era of [Large Language Models (LLMs)](https://www.youtube.com/watch?v=zjkBMFhNj_g), software development is becoming increasingly automated by AI copilots. Many folks are forecasting that AI will replace developers in as little as a few years, while investors declare the arrival of superhuman AI software engineers. This worries some developers and annoys others.
 
