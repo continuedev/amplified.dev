@@ -100,7 +100,7 @@ Amplified developers need clear guidance about how data should flow into and out
 
 **Actions to take now**
 
-- Allow data software development lifecycle data to be used as context
+- Allow data from your software development lifecycle to be used as context
 - Explore how you can allow “write action” integrations (e.g. creating Jira tickets)
 - Centralize the management of tokens, so folks automatically follow best security practices
 - Follow Principle of least privilege (PoLP) but make it easy for folks to request access
