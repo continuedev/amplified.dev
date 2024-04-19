@@ -8,7 +8,7 @@ To get help on tasks that include many steps, this likely requires some sort of 
 
 ## Planning
 
-For slower, asynchronous tasks (e.g. multi-file refactoring), planning in a task environment is needed to run workflows. The task environment should contain common developer tools, including a shell, code editor, and browser within a sandboxed compute environment—everything a human would need to do their work. Examples heading in this direction include [Code Interpreter](https://platform.openai.com/docs/assistants/tools/code-interpreter) and [OpenInterpreter](https://www.openinterpreter.com/) as well as sandboxes like [e2b.dev](http://e2b.devhttps://e2b.dev/). This is also an important area of exploration for research labs that frequently goes hand-in-hand with reasoning.
+For slower, asynchronous tasks (e.g. multi-file refactoring), planning in a task environment is needed to run workflows. The task environment should contain common developer tools, including a shell, code editor, and browser within a sandboxed compute environment—everything a human would need to do their work. Examples heading in this direction include [Code Interpreter](https://platform.openai.com/docs/assistants/tools/code-interpreter) and [OpenInterpreter](https://www.openinterpreter.com/) as well as sandboxes like [e2b.dev](https://e2b.dev/). This is also an important area of exploration for research labs that frequently goes hand-in-hand with reasoning.
 
 ## Proactive
 

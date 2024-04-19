@@ -53,7 +53,7 @@ Amplified developers use AI software development systems and are actively involv
 - Set up a sustainable way to configure and roll out updates to your team
 - Make it easy to share prompts, context providers, slash commands, etc.
 
-Like DevOps, this is a practice that requires the whole team. You need to make sure to design your AI software development system with an [architecture of participation](https://web.archive.org/web/20120208001626/http://www.oreillynet.com/pub/a/oreilly/tim/articles/architecture_of_participation.html) in mind. When anyone on your team gets a wrong / bad suggestion from the system, they should be able to do something about it. This is critical because these systems are so often wrong today.
+Like DevOps, this is a practice that requires the whole team. You need to make sure to design your AI software development system with an [architecture of participation](https://web.archive.org/web/20120208001626) in mind. When anyone on your team gets a wrong / bad suggestion from the system, they should be able to do something about it. This is critical because these systems are so often wrong today.
 
 But this is only possible if each developer has the opportunity to participate in the creation and maintenance of the system. If this true, then over time, the system will increasingly help construct and maintain the software you create within your organization, while the developers who previously did that work shift more time to working on the system itself.
 
@@ -111,7 +111,7 @@ Best practices from web apps and DevOps apply here too. Permissions and integrat
 
 ### 5. Adopt open-source interfaces
 
-Amplified developers need standardized interfaces (i.e. IDE extensions today), so that an open an ecosystem can emerge within and across organizations.
+Amplified developers need standardized interfaces (i.e. IDE extensions today), so that an open ecosystem can emerge within and across organizations.
 
 **Actions to take now**
 

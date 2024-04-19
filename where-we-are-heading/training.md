@@ -1,10 +1,10 @@
 # Training engine
 
-The training engine component or set of components would enable to use your [development data](https://www.notion.so/Training-engine-7c128653aa36484aa38be07001c8d372?pvs=21) to improve the LLMs you use. This could involve fine-tuning, domain adaptive continued pre-training, and / or pre-training models from scratch.
+The training engine component or set of components would enable to use your [development data](https://continue.dev/docs/development-data) to improve the LLMs you use. This could involve fine-tuning, domain adaptive continued pre-training, and / or pre-training models from scratch.
 
 ## Fine-tuning
 
-This approach is the most accessible to organizations in the near-term. A good rule of thumb is that this requires domain-specific instruction data and hundreds of GPU hours. The benefit of this approach is that it can shape the style and format of the suggestions for your organization and maybe even for particular teams or individual developers. This likely happens on a server using [development data](https://continue.dev/docs/development-data), though it could happen locally eventually. It could also become a continuous process that runs periodically like [smol.ai](http://smol.aihttps://smol.ai/) and [Arcee](https://www.arcee.ai/) are aiming to do.
+This approach is the most accessible to organizations in the near-term. A good rule of thumb is that this requires domain-specific instruction data and hundreds of GPU hours. The benefit of this approach is that it can shape the style and format of the suggestions for your organization and maybe even for particular teams or individual developers. This likely happens on a server using development data, though it could happen locally eventually. It could also become a continuous process that runs periodically like [smol.ai](https://smol.ai/) and [Arcee](https://www.arcee.ai/) are aiming to do.
 
 ## Domain adaptive continued pre-training
 
