@@ -3,3 +3,4 @@
 - [Jesse Robbins](https://github.com/jesserobbins)
 - [James Lindenbaum](https://github.com/jnl)
 - [Roger Meier](https://github.com/bufferoverflow)
+- [Max Wittig](https://github.com/max-wittig)
