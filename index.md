@@ -127,7 +127,7 @@ Today, this interface is often in the form of an IDE extension that likely inclu
 
 When a new tool enters your workflow, it changes how you think. As software development is increasingly automated, we need to be able to shape AI software development systems, so that we can shape how we think. But AI is not going to magically do everything. When it works, developers will move toward higher levels of abstraction. When it doesn’t, we should be able to do something about it.
 
-This is another wave like DevOps, analytics, supervised ML systems, etc. which is expanding the number of problems available to reliable automation. As a result, the principles that will lead to success will be the same as they have always been: successful teams will set a foundation, adopt best practices, look to iterate, build internal tools, and talk candidly with their team.
+At a minimum, this is another wave like DevOps, analytics, supervised ML systems, etc. which is expanding the number of problems available to reliable automation. As a result, the principles that will lead to success will be the same as they have always been: successful teams will set a foundation, adopt best practices, look to iterate, build internal tools, and talk candidly with their team.
 
 All in all, each of us will need to actively participate in the construction and maintenance of AI software development systems. This shouldn’t be a surprise; if you or your fellow developers use a code assistance tool every day, maybe even seeing suggestions on every keystroke, you know that each improvement has a huge effect on productivity; as much, if not more, than any other developer tool that you could spend time and resources on improving.
 
