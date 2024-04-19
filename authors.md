@@ -2,3 +2,4 @@
 - [Nate Sesti](https://github.com/sestinj)
 - [Jesse Robbins](https://github.com/jesserobbins)
 - [James Lindenbaum](https://github.com/jnl)
+- [Roger Meier](https://github.com/bufferoverflow)
