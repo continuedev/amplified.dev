@@ -1,0 +1,3 @@
+# Code Completion model
+
+The “code completion” model component is used to power autocomplete suggestions and is typically a 1-15B parameter model. As a result, you can run these models on your laptop or on a server. Because developers need a suggestion within 500ms, you generally need to use a smaller model in order to meet the latency requirements. However, the quality of suggestions you get from models that are too small is bad. Thus, the tab-autocomplete model is optimized primarily with these two constraints in mind. Examples of models used for tab-autocomplete include Codex, DeepSeek Coder Base, StarCoder 2, Replit Code, etc.
