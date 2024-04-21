@@ -7,3 +7,4 @@
 - [Ercan Ucan](https://github.com/ercanucan)
 - [Diego Louzán](https://github.com/dlouzan)
 - [Fabio Huser](https://github.com/fh1ch)
+- [Scott Truitt](https://github.com/scottruitt)
