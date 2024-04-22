@@ -18,7 +18,7 @@ What we call “AI copilots” are much more than a single LLM. As the Berkeley 
 
 As more of software development is automated, we are seeing more human engineering time go into monitoring, maintaining, and improving the different components that make up AI software development systems. That said, most copilots to date have been black box, SaaS solutions with roughly the same components, which you often have little to no ability to understand or improve.
 
-- [Tab model](./where-we-are-today/tab.md)
+- [Autocomplete model](./where-we-are-today/autocomplete.md)
 - [Chat model](./where-we-are-today/chat.md)
 - [Local context engine](./where-we-are-today/local.md)
 - [Server context engine](./where-we-are-today/server.md)
