@@ -1,3 +1,0 @@
-# Server context engine
-
-The server context engine component is used to automatically gather relevant context from all of your codebases and your entire software development lifecycle. Like the local context engine, it uses embeddings to build an index of your codebase. It is critical when you have many and large codebases, so that you can create a single, shared index for all developers in your organization to use. It is also beginning to grow beyond codebases, incorporating software development lifecycle data like GitLab issues, Confluence docs, etc.

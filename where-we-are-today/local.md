@@ -1,3 +1,0 @@
-# Local context engine
-
-The local context engine component is used to automatically gather relevant context from your current codebase or other parts of your software development lifecycle (e.g. Jira tickets). It is most commonly leveraged for the tab-autocomplete use case, where it handles timing, context, and filtering. The local context engine frequently leverages embeddings, full-text search, and the Language Server Protocol to provide fast responses for smaller-scale data.

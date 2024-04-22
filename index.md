@@ -18,23 +18,94 @@ What we call “AI copilots” are much more than a single LLM. As the Berkeley 
 
 As more of software development is automated, we are seeing more human engineering time go into monitoring, maintaining, and improving the different components that make up AI software development systems. That said, most copilots to date have been black box, SaaS solutions with roughly the same components, which you often have little to no ability to understand or improve.
 
-- [Autocomplete model](./where-we-are-today/autocomplete.md)
-- [Chat model](./where-we-are-today/chat.md)
-- [Local context engine](./where-we-are-today/local.md)
-- [Server context engine](./where-we-are-today/server.md)
-- [Filtering](./where-we-are-today/filtering.md)
+<details>
+<summary>Autocomplete model</summary>
+<br>
+<p>The "autocomplete" model component is used to power code completion suggestions and is typically a 1-15B parameter model. The models are run on your laptop or on a remote server and have generally been trained with special templates like fill-in-the-middle (FIM) for code infilling. Because developers need a suggestion within 500ms, you generally need to use a smaller model in order to meet the latency requirements. However, the quality of suggestions you get from models that are too small is bad. Thus, the tab-autocomplete model is optimized primarily with these two constraints in mind. Examples of models used for code completion include <a href="https://arxiv.org/pdf/2107.03374.pdf">Codex</a>, <a href="https://developers.googleblog.com/2024/04/gemma-family-expands.html">CodeGemma</a>, <a href="https://arxiv.org/pdf/2308.12950.pdf">Code Llama</a>, <a href="https://deepseekcoder.github.io/">DeepSeek Coder Base</a>, and <a href="https://arxiv.org/pdf/2402.19173.pdf">StarCoder 2</a>.</p>
+</details>
+
+<details>
+<summary>Chat model</summary>
+<br>
+<p>The “chat” model component is used to power question-answer experiences and is typically a 30B+ parameter model. Latency is not as important as it is for the “autocomplete” model, so most people choose the one that gives them the best possible responses, oftentimes opting for SaaS API endpoints. When SaaS isn’t possible or preferred, open-source models are self-hosted on a server for the entire team to use. Examples of models used for chat experiences include GPT-4, DeepSeek Coder 33B, Claude 3, Code Llama 70B, Llama 3 70B etc.</p>
+</details>
+
+<details>
+<summary>Local context engine</summary>
+<br>
+<p>The local context engine component is used to automatically gather relevant context from your current codebase or other parts of your software development lifecycle (e.g. Jira tickets). It is most commonly leveraged for the tab-autocomplete use case, where it handles timing, context, and filtering. The local context engine frequently leverages embeddings, full-text search, and the Language Server Protocol to provide fast responses for smaller-scale data.</p>
+</details>
+
+<details>
+<summary>Remote context engine</summary>
+<br>
+<p>The remote context engine component is used to automatically gather relevant context from all of your codebases and your entire software development lifecycle. Like the local context engine, it uses embeddings to build an index of your codebase. It is critical when you have many and large codebases, so that you can create a single, shared index for all developers in your organization to use. It is also beginning to grow beyond codebases, incorporating software development lifecycle data like GitLab issues, Confluence docs, etc.</p>
+</details>
+
+<details>
+<summary>Filtering</summary>
+<br>
+<p>The filtering component filters for suggestions that are low quality, insecure, or raise licensing concerns. It sometimes even asks for a new suggestion automatically. While the most common use case is to block suggestions matching public code, developers are also exploring filtering to make sure that suggestions can compile, pass a linter, pass tests, only use certain libraries, etc. before being shown to the user.</p>
+</details>
 
 ## Where we are heading
 
 Among the changes on the horizon are two new components (async engines and training engines) and three trends that are likely to expand the standard AI software development system (further specialized models, better toolchain integrations, and increasingly modular systems).
 
-- [Async engines](./where-we-are-heading/async.md)
-- [Training engines](./where-we-are-heading/training.md)
-- [Trends](./where-we-are-heading/trends.md)
+<details>
+<summary>Async engines</summary>
+<br>
+<p>The async engine component or set of components would enable your AI software development system to accomplish tasks that require many steps. Often referred to as “agents” by some developers, it likely requires reasoning, planning, and proactive capabilities.</p>
+<h3>Reasoning</h3>
+<p>To get help on tasks that include many steps, this likely requires some sort of reasoning engine. It could also be a model, depending on how LLM capabilities improve. <a href="https://swe-agent.com/">SWE-Agent</a> and <a href="https://www.cognition-labs.com/introducing-devin">Devin</a> are early projects that excite people about the possibilities of reasoning, and there are indications that OpenAI and other research labs are working in this direction. There are still many open research questions here though.</p>
+<h3>Planning</h3>
+<p>For slower, asynchronous tasks (e.g. multi-file refactoring), planning in a task environment is needed to run workflows. The task environment should contain common developer tools, including a shell, code editor, and browser within a sandboxed compute environment—everything a human would need to do their work. Examples heading in this direction include <a href="https://platform.openai.com/docs/assistants/tools/code-interpreter">Code Interpreter</a> and <a href="https://www.openinterpreter.com/">OpenInterpreter</a> as well as sandboxes like <a href="https://e2b.dev/">e2b.dev</a>. This is also an important area of exploration for research labs that frequently goes hand-in-hand with reasoning.</p>
+<h3>Proactive</h3>
+<p>In addition to reasoning and planning capabilities, you are likely to want an “agent” to be able to 1) ask for help from developers when it gets stuck or needs feedback and 2) offer support before the developer asks for help. This makes reasoning and planning even more complex and challenging, since you don’t want to overwhelm or annoy developers with notifications.
+</p>
+</details>
+<details>
+<summary>Training engine</summary>
+<br>
+<p>The training engine component or set of components would enable to use your <a href="https://continue.dev/docs/development-data">development data</a> to improve the LLMs you use. This could involve fine-tuning, domain adaptive continued pre-training, and / or pre-training models from scratch.</p>
+<h3>Fine-tuning</h3>
+<p>This approach is the most accessible to organizations in the near-term. A good rule of thumb is that this requires domain-specific instruction data and hundreds of GPU hours. The benefit of this approach is that it can shape the style and format of the suggestions for your organization and maybe even for particular teams or individual developers. This likely happens on a remote server using development data, though it could happen locally eventually. It could also become a continuous process that runs periodically like <a href="https://smol.ai/">smol.ai</a> and <a href="https://www.arcee.ai/">Arcee</a> are aiming to do.</p>
+<h3>Domain adaptive continued pre-training</h3>
+<p>This approach is likely to become more accessible to organizations in the medium-term. A good rule of thumb today is that this requires an open-source base model, billions of tokens of relevant company data, and thousands of GPU hours. Due to these requirements, this will almost certainly take place on a server. The benefit of this approach is that you can have a lot more control over model capabilities than what fine-tuning offers. This is how <a href="https://research.nvidia.com/publication/2023-10_chipnemo-domain-adapted-llms-chip-design">ChipNeMo was created by Nvidia</a> and how <a href="https://arxiv.org/pdf/2308.12950.pdf">Code Llama was created by Meta</a>, which both used Llama 2 as their base model.</p>
+<h3>Pre-training models from scratch</h3>
+<p>This approach is likely to become more accessible to organizations in the long-term. A good rule of thumb today is that this requires trillions of tokens of Internet data, billions of tokens of relevant company data, and millions of GPU hours. The benefit of this approach is that you get complete control over model capabilities by determining what data is used for training. It could also be the case that you use vendors to help with this. For example, today OpenAI <a href="https://openai.com/form/custom-models">will create custom GPT-4 models for you</a> with prices starting at $2-3M, MosaicML has trained models for organizations like <a href="https://blog.replit.com/llm-training">Replit</a>, and Together will <a href="https://www.together.ai/products#custom-models">help you build models from scratch</a> too.</p>
+</details>
+<details>
+<summary>Trends</summary>
+<br>
+<p>There are even more AI software development system components that are likely to emerge from trends that are just beginning: further specialized models, better toolchain integrations, and increasingly modular systems.</p>
+<h3>Further specialized models</h3>
+<p>We are seeing a number of vendors beginning to train models for specialized use cases:</p>
+<ul>
+    <li>Cursor has a model aimed at <a href="https://cursor.sh/cpp">predicting your next edit</a></li>
+    <li>Phind has a model aimed at <a href="https://www.phind.com/blog/introducing-phind-70b">being just as good as GPT-4 but faster</a></li>
+    <li>Replit has a model aimed at <a href="https://twitter.com/pirroh/status/1775327316157358564?s=20">mimicking the behavior of LSP Code Actions</a></li>
+    <li>Magic has a model aimed at <a href="https://x.com/magicailabs/status/1666116935904292869?s=20">being able to use entire codebases as context</a></li>
+    <li>Poolside has a model aimed at <a href="https://www.poolside.ai/">better helping with real world use cases</a></li>
+</ul>
+<p>We expect more and more specialized to be created and dispersed over time.</p>
+<h3>Better toolchain integrations</h3>
+<p>We are seeing folks creating deeper, more custom integrations with their infrastructure:</p>
+<ul>
+    <li>Being able to use <a href="https://continue.dev/docs/customization/context-providers#jira-issues">Jira tickets</a> as context</li>
+    <li>Being able to use <a href="https://continue.dev/docs/customization/context-providers#documentation">documentation sites</a> as context</li>
+    <li>Being able to use <a href="https://continue.dev/docs/customization/context-providers#database-tables">database tables</a> as context</li>
+</ul>
 
-AI software development systems are evolving quickly. In order to avoid vendor lock-in, keep up as new components emerge, and customize your AI dev system to your specific needs, you need an approach that enables freedom and flexibility.
+<p>We expect to increasingly see more of the software development lifecycle integrated. Eventually, we believe that “write action” integrations will emerge too (e.g. create a GitHub Issue).</p>
+<h3>Increasingly modular systems</h3>
+<p>Because model capabilities are improving so rapidly and developers are constantly figuring out new ways to leverage LLMs while coding, folks are designing their AI software development systems to be modular. This is because it ensures you minimize vendor lock-in, enables you to better keep up as AI progress occurs, and allows you to meet your specific requirements.</p>
+<p>When new components become available or are shown to be valuable, your modular system gives you the flexibility and extensibility necessary to either buy them from vendors or build them yourself. At this point, betting on any particular model, provider, or tool completely is premature optimization. To create these systems, we each have our own needs, so we will need to create and tune our own reusable components.</p>
+</details>
 
 ## Amplified developers
+
+AI software development systems are evolving quickly. In order to avoid vendor lock-in, keep up as new components emerge, and customize your AI dev system to your specific needs, you need an approach that enables freedom and flexibility.
 
 Companies at the frontier like [Google](https://blog.research.google/2023/05/large-sequence-models-for-software.html), [Meta](https://arxiv.org/abs/2402.09171), [Nvidia](https://research.nvidia.com/publication/2023-10_chipnemo-domain-adapted-llms-chip-design), [Airbnb](https://youtu.be/_kV7fUVGz9E?si=9YWu-UQGE6CuPeuM), and [Uber](https://youtu.be/zQ5e3B5I-U0?si=UNtJo3DDxhrZBoE5) have platform development teams that create their own AI software development systems. We are seeing many more organizations head down the same path.
 
@@ -105,7 +176,7 @@ Amplified developers need clear guidance about how data should flow into and out
 
 You want to give LLMs as much relevant information as possible to get the best suggestions, so allowing for integrations but putting proper permissions that enable this will be important. This is both read and write access for not only human developers but also for the AI software development system.
 
-Already today you’ll want to deploy embeddings, a “chat” model, a configuration server, a shared index, and more, so you need permissions and integrations that enable you to index any codebase and reference it with context providers. There is also lots of data from across the software development lifecycle that you will want to pull in more and more over time (i.e. GitLab Issues, Confluence docs, etc) too.
+Already today you’ll want to deploy embeddings, a “chat” model, a remote configuration server, a shared index, and more, so you need permissions and integrations that enable you to index any codebase and reference it with context providers. There is also lots of data from across the software development lifecycle that you will want to pull in more and more over time (i.e. GitLab Issues, Confluence docs, etc) too.
 
 Best practices from web apps and DevOps apply here too. Permissions and integrations can get messy quick, so having a good approach here will set you up to evolve much better.
 
