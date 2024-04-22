@@ -18,7 +18,7 @@ What we call “AI copilots” are much more than a single LLM. As the Berkeley 
 
 As more of software development is automated, we are seeing more human engineering time go into monitoring, maintaining, and improving the different components that make up AI software development systems. That said, most copilots to date have been black box, SaaS solutions with roughly the same components, which you often have little to no ability to understand or improve.
 
-- [Tab model](./where-we-are-today/tab.md)
+- [Autocomplete model](./where-we-are-today/autocomplete.md)
 - [Chat model](./where-we-are-today/chat.md)
 - [Local context engine](./where-we-are-today/local.md)
 - [Server context engine](./where-we-are-today/server.md)
@@ -53,7 +53,7 @@ Amplified developers use AI software development systems and are actively involv
 - Set up a sustainable way to configure and roll out updates to your team
 - Make it easy to share prompts, context providers, slash commands, etc.
 
-Like DevOps, this is a practice that requires the whole team. You need to make sure to design your AI software development system with an [architecture of participation](https://web.archive.org/web/20120208001626) in mind. When anyone on your team gets a wrong / bad suggestion from the system, they should be able to do something about it. This is critical because these systems are so often wrong today.
+Like DevOps, this is a practice that requires the whole team. You need to make sure to design your AI software development system with an [architecture of participation](https://web.archive.org/web/20120208001626/http://www.oreillynet.com/pub/a/oreilly/tim/articles/architecture_of_participation.html) in mind. When anyone on your team gets a wrong / bad suggestion from the system, they should be able to do something about it. This is critical because these systems are so often wrong today.
 
 But this is only possible if each developer has the opportunity to participate in the creation and maintenance of the system. If this true, then over time, the system will increasingly help construct and maintain the software you create within your organization, while the developers who previously did that work shift more time to working on the system itself.
 
