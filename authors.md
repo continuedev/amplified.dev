@@ -9,4 +9,6 @@
 - [Fabio Huser](https://github.com/fh1ch)
 - [Antoine Auger](https://github.com/antoineauger)
 - [Scott Truitt](https://github.com/scottruitt)
+- [John K. Lindstedt](https://github.com/JacKaL37)
+- [Steffen Roecker](https://github.com/sroecker)
 - [Peter Zaback](https://github.com/pzaback)
