@@ -9,3 +9,4 @@
 - [Fabio Huser](https://github.com/fh1ch)
 - [Antoine Auger](https://github.com/antoineauger)
 - [Scott Truitt](https://github.com/scottruitt)
+- [Benedict Lee](https://github.com/benedict-lee)
