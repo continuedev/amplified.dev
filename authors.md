@@ -9,4 +9,8 @@
 - [Fabio Huser](https://github.com/fh1ch)
 - [Antoine Auger](https://github.com/antoineauger)
 - [Scott Truitt](https://github.com/scottruitt)
-- [Russell Richardson](https://github.com/POWERFULMOVES).
+- [John K. Lindstedt](https://github.com/JacKaL37)
+- [Steffen Roecker](https://github.com/sroecker)
+- [Peter Zaback](https://github.com/pzaback)
+- [Benedict Lee](https://github.com/benedict-lee)
+- [Russell Richardson](https://github.com/POWERFULMOVES)
