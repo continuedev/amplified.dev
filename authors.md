@@ -13,3 +13,4 @@
 - [Steffen Roecker](https://github.com/sroecker)
 - [Peter Zaback](https://github.com/pzaback)
 - [Benedict Lee](https://github.com/benedict-lee)
+- [Russell Richardson](https://github.com/POWERFULMOVES)
