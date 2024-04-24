@@ -12,3 +12,4 @@
 - [John K. Lindstedt](https://github.com/JacKaL37)
 - [Steffen Roecker](https://github.com/sroecker)
 - [Peter Zaback](https://github.com/pzaback)
+- [Benedict Lee](https://github.com/benedict-lee)
