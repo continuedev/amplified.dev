@@ -15,3 +15,4 @@
 - [Benedict Lee](https://github.com/benedict-lee)
 - [Russell Richardson](https://github.com/POWERFULMOVES)
 - [Rajat negi](https://github.com/therajat08)
+- [Florian Greinacher](https://github.com/fgreinacher)
