@@ -14,5 +14,6 @@
 - [Peter Zaback](https://github.com/pzaback)
 - [Benedict Lee](https://github.com/benedict-lee)
 - [Russell Richardson](https://github.com/POWERFULMOVES)
-- [Rajat negi](https://github.com/therajat08)
+- [Rajat Negi](https://github.com/therajat08)
+- [Florian Greinacher](https://github.com/fgreinacher)
 - [Nejc Habjan](https://github.com/nejch)
