@@ -204,4 +204,4 @@ All in all, each of us will need to actively participate in the construction and
 
 If we put our energy into crafting the right AI software development systems in the right way, developers will be amplified, instead of being automated. Perhaps one day all developers will do is sit around a table discussing where to point their AI software development system next. But, for now, we have a lot of work to do to head towards that!
 
-_If you believe in a future where developers are amplified, join us by adding your name and opening a pull request [here](https://github.com/continuedev/amplified.dev/edit/main/authors.md)._
+_If you believe in a future where developers are amplified, join us by adding your name and opening a pull request [here](https://github.com/continuedev/amplified.dev/edit/main/supporters.md)._
