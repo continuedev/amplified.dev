@@ -17,3 +17,4 @@
 - [Rajat Negi](https://github.com/therajat08)
 - [Florian Greinacher](https://github.com/fgreinacher)
 - [Nejc Habjan](https://github.com/nejch)
+- [Julia Longtin](https://github.com/julialongtin/)
