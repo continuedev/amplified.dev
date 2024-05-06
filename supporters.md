@@ -19,3 +19,4 @@
 - [Nejc Habjan](https://github.com/nejch)
 - [Wilder Lopes](https://github.com/wilderlopes)
 - [Julia Longtin](https://github.com/julialongtin/)
+- [Linus Schlumberger](https://github.com/Killusions)
