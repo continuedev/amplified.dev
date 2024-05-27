@@ -21,3 +21,4 @@
 - [Julia Longtin](https://github.com/julialongtin/)
 - [Linus Schlumberger](https://github.com/Killusions)
 - [Natalie Lunbeck](https://github.com/nbeck415)
+- [Nebojsa Krtolica](https://github.com/nebojsakrtolica)
