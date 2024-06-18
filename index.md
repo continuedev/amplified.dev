@@ -161,7 +161,7 @@ When you use LLMs while coding, you generate development data that shows the ste
 
 The ability to collect this data is critical. AI models are as good at coding as they are because developers made their code publicly available on GitHub, and you being able to keep your development data is going to be critical for your ability to understand and improve your AI software development system in the future.
 
-The reason this is necessary is because each of us has our own definition of the right way to build software. To gain mass adoption, the AI systems that we use to build software needs to not only respect this but also reflect it. When suggestions we get from AI systems do not meet [our definition of the right way to build software](https://joshcollinsworth.com/blog/copilot), we need to be able to [improve them](https://blog.continue.dev/improve-code-suggestions/).
+The reason this is necessary is because each of us has our own definition of the right way to build software. To gain mass adoption, the AI systems that we use to build software need to not only respect this but also reflect it. When suggestions we get from AI systems do not meet [our definition of the right way to build software](https://joshcollinsworth.com/blog/copilot), we need to be able to [improve them](https://blog.continue.dev/improve-code-suggestions/).
 
 ### 4. Standardize permissions and integrations
 
