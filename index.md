@@ -88,7 +88,7 @@ Among the changes on the horizon are two new components (async engines and train
     <li>Magic has a model aimed at <a href="https://x.com/magicailabs/status/1666116935904292869?s=20">being able to use entire codebases as context</a></li>
     <li>Poolside has a model aimed at <a href="https://www.poolside.ai/">better helping with real world use cases</a></li>
 </ul>
-<p>We expect more and more specialized to be created and dispersed over time.</p>
+<p>We expect more and more specialized models to be created and dispersed over time.</p>
 <h3>Better toolchain integrations</h3>
 <p>We are seeing folks creating deeper, more custom integrations with their infrastructure:</p>
 <ul>
@@ -126,7 +126,7 @@ Amplified developers use AI software development systems and are actively involv
 
 Like DevOps, this is a practice that requires the whole team. You need to make sure to design your AI software development system with an [architecture of participation](https://web.archive.org/web/20120208001626/http://www.oreillynet.com/pub/a/oreilly/tim/articles/architecture_of_participation.html) in mind. When anyone on your team gets a wrong / bad suggestion from the system, they should be able to do something about it. This is critical because these systems are so often wrong today.
 
-But this is only possible if each developer has the opportunity to participate in the creation and maintenance of the system. If this true, then over time, the system will increasingly help construct and maintain the software you create within your organization, while the developers who previously did that work shift more time to working on the system itself.
+But this is only possible if each developer has the opportunity to participate in the creation and maintenance of the system. If this is true, then over time, the system will increasingly help construct and maintain the software you create within your organization, while the developers who previously did that work shift more time to working on the system itself.
 
 ### 2. Enable the right models for the job
 
@@ -161,7 +161,7 @@ When you use LLMs while coding, you generate development data that shows the ste
 
 The ability to collect this data is critical. AI models are as good at coding as they are because developers made their code publicly available on GitHub, and you being able to keep your development data is going to be critical for your ability to understand and improve your AI software development system in the future.
 
-The reason this is necessary is because each of us has our own definition of the right way to build software. To gain mass adoption, the AI systems that we use to build software need to not only respect this but also reflect it. When suggestions we get from AI systems do not meet [our definition of the right way to build software](https://joshcollinsworth.com/blog/copilot), we need to be able to [improve them](https://blog.continue.dev/improve-code-suggestions/).
+The reason this is necessary is because each of us has our own definition of the right way to build software. To gain mass adoption, the AI systems that we use to build software needs to not only respect this but also reflect it. When suggestions we get from AI systems do not meet [our definition of the right way to build software](https://joshcollinsworth.com/blog/copilot), we need to be able to [improve them](https://blog.continue.dev/improve-code-suggestions/).
 
 ### 4. Standardize permissions and integrations
 
@@ -172,7 +172,7 @@ Amplified developers need clear guidance about how data should flow into and out
 - Allow data from your software development lifecycle to be used as context
 - Explore how you can allow “write action” integrations (e.g. creating Jira tickets)
 - Centralize the management of tokens, so folks automatically follow best security practices
-- Follow Principle of least privilege (PoLP) but make it easy for folks to request access
+- Follow Principle of Least Privilege (PoLP) but make it easy for folks to request access
 
 You want to give LLMs as much relevant information as possible to get the best suggestions, so allowing for integrations but putting proper permissions that enable this will be important. This is both read and write access for not only human developers but also for the AI software development system.
 
