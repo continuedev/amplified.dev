@@ -25,3 +25,4 @@
 - [Patrick Erichsen](https://github.com/Patrick-Erichsen)
 - [Loris Alexandre](https://github.com/lorisalx)
 - [Kevin Brockhoff](https://github.com/kbrockhoff)
+- [Toby Morning](https://github.com/urbantech)
