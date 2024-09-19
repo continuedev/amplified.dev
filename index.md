@@ -57,7 +57,7 @@ Among the changes on the horizon are two new components (async engines and train
 <br>
 <p>The async engine component or set of components would enable your AI software development system to accomplish tasks that require many steps. Often referred to as “agents” by some developers, it likely requires reasoning, planning, and proactive capabilities.</p>
 <h3>Reasoning</h3>
-<p>To get help on tasks that include many steps, this likely requires some sort of reasoning engine. It could also be a model, depending on how LLM capabilities improve. <a href="https://swe-agent.com/">SWE-Agent</a> and <a href="https://www.cognition-labs.com/introducing-devin">Devin</a> are early projects that excite people about the possibilities of reasoning, and there are indications that OpenAI and other research labs are working in this direction. There are still many open research questions here though.</p>
+<p>To get help on tasks that include many steps, this likely requires some sort of reasoning engine. OpenAI has released a <a href="https://openai.com/o1/">preview for its o1 reasoning model</a>, which has powerful new abilities to work through complex multi-step problems. <a href="https://swe-agent.com/">SWE-Agent</a> and <a href="https://www.cognition-labs.com/introducing-devin">Devin</a> are also early projects that excite people about the possibilities of reasoning, and there are indications that other research labs are working in this direction. There are still many open research questions here though.</p>
 <h3>Planning</h3>
 <p>For slower, asynchronous tasks (e.g. multi-file refactoring), planning in a task environment is needed to run workflows. The task environment should contain common developer tools, including a shell, code editor, and browser within a sandboxed compute environment—everything a human would need to do their work. Examples heading in this direction include <a href="https://platform.openai.com/docs/assistants/tools/code-interpreter">Code Interpreter</a> and <a href="https://www.openinterpreter.com/">OpenInterpreter</a> as well as sandboxes like <a href="https://e2b.dev/">e2b.dev</a>. This is also an important area of exploration for research labs that frequently goes hand-in-hand with reasoning.</p>
 <h3>Proactive</h3>
@@ -119,10 +119,10 @@ Amplified developers use AI software development systems and are actively involv
 
 **Actions to take now**
 
-- Commit to a future where developers are amplified and tell your team
-- Ensure your AI dev system is modular and designed for user contribution
-- Set up a sustainable way to configure and roll out updates to your team
-- Make it easy to share prompts, context providers, slash commands, etc.
+-   Commit to a future where developers are amplified and tell your team
+-   Ensure your AI dev system is modular and designed for user contribution
+-   Set up a sustainable way to configure and roll out updates to your team
+-   Make it easy to share prompts, context providers, slash commands, etc.
 
 Like DevOps, this is a practice that requires the whole team. You need to make sure to design your AI software development system with an [architecture of participation](https://web.archive.org/web/20120208001626/http://www.oreillynet.com/pub/a/oreilly/tim/articles/architecture_of_participation.html) in mind. When anyone on your team gets a wrong / bad suggestion from the system, they should be able to do something about it. This is critical because these systems are so often wrong today.
 
@@ -134,10 +134,10 @@ Amplified developers need the freedom to use and reuse the right models and comp
 
 **Actions to take now**
 
-- Set up a proxy server to make LLMs available to developers
-- Make multiple models available and compare their usage
-- Provide explicit guidance on how developers can test models locally
-- Ask developers to share about how they are using your AI dev system
+-   Set up a proxy server to make LLMs available to developers
+-   Make multiple models available and compare their usage
+-   Provide explicit guidance on how developers can test models locally
+-   Ask developers to share about how they are using your AI dev system
 
 Situations and environments vary so much that developers are going to need figure out how to balance speed, quality, cost, and other constraints when automating part of their job. To do this, they need to be able to know about the models they are using and have choice over when, where, and how to use them.
 
@@ -149,11 +149,11 @@ Amplified developers need to understand how the AI software development system w
 
 **Actions to take now**
 
-- Collect [development data](https://continue.dev/docs/development-data) when developers use LLMs
-- Determine what KPIs are worth tracking for your team
-- Set up dashboards that show your system usage
-- Identify opportunities for improvement from the data
-- Make changes to the components to improve KPIs
+-   Collect [development data](https://continue.dev/docs/development-data) when developers use LLMs
+-   Determine what KPIs are worth tracking for your team
+-   Set up dashboards that show your system usage
+-   Identify opportunities for improvement from the data
+-   Make changes to the components to improve KPIs
 
 Your system will likely not be the best when you first stand it up, but if you collect data, you will set yourself up to improve it over time. You’ll also be able to show the value / ROI / positive impact on productivity. This will set you up to get more budget and resources from your organization for future system investments.
 
@@ -169,10 +169,10 @@ Amplified developers need clear guidance about how data should flow into and out
 
 **Actions to take now**
 
-- Allow data from your software development lifecycle to be used as context
-- Explore how you can allow “write action” integrations (e.g. creating Jira tickets)
-- Centralize the management of tokens, so folks automatically follow best security practices
-- Follow Principle of Least Privilege (PoLP) but make it easy for folks to request access
+-   Allow data from your software development lifecycle to be used as context
+-   Explore how you can allow “write action” integrations (e.g. creating Jira tickets)
+-   Centralize the management of tokens, so folks automatically follow best security practices
+-   Follow Principle of Least Privilege (PoLP) but make it easy for folks to request access
 
 You want to give LLMs as much relevant information as possible to get the best suggestions, so allowing for integrations but putting proper permissions that enable this will be important. This is both read and write access for not only human developers but also for the AI software development system.
 
@@ -186,9 +186,9 @@ Amplified developers need standardized interfaces (i.e. IDE extensions today), s
 
 **Actions to take now**
 
-- Educate developers on your team about development data
-- Roll out open-source interfaces to your team
-- Push for other organizations to also standardize on the same interfaces
+-   Educate developers on your team about development data
+-   Roll out open-source interfaces to your team
+-   Push for other organizations to also standardize on the same interfaces
 
 The interface between developers and AI should be open source. This enables all of us to 1) build an open ecosystem of components decoupled from the interface and 2) ensure that data emitted by the interface, which will be used to make increasingly capable models for software development, is pooled and directed by its owners rather than being collected and monopolized by a centralized, closed-source interface.
 
