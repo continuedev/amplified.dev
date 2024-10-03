@@ -33,3 +33,4 @@
 -   [Dallin Romney](https://github.com/RomneyDa)
 -   [3atthias 3erger](https://github.com/feinmann)
 -   [Saurabh Davda](https://github.com/Saurabh77-99)
+-   [Dipankar Sarkar](https://github.com/dipankar)
