@@ -34,3 +34,4 @@
 -   [3atthias 3erger](https://github.com/feinmann)
 -   [Saurabh Davda](https://github.com/Saurabh77-99)
 -   [Dipankar Sarkar](https://github.com/dipankar)
+-   [Rodrigo Mendoza-Smith](https://github.com/rodrgo)
