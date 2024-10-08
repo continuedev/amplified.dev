@@ -38,3 +38,4 @@
 -   [Rodrigo Mendoza-Smith](https://github.com/rodrgo)
 -   [Gaurav Varma](https://github.com/gaurav-varma)
 -   [Zac Nwogwugwu](https://github.com/zacn04)
+-   [Delano Mandelbaum](https://github.com/delano)
