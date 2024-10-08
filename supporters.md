@@ -37,3 +37,4 @@
 -   [Shukant Pal](https://github.com/ShukantPal)
 -   [Rodrigo Mendoza-Smith](https://github.com/rodrgo)
 -   [Gaurav Varma](https://github.com/gaurav-varma)
+-   [Zac Nwogwugwu](https://github.com/zacn04)
