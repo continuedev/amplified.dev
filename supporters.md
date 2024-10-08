@@ -34,5 +34,7 @@
 -   [3atthias 3erger](https://github.com/feinmann)
 -   [Saurabh Davda](https://github.com/Saurabh77-99)
 -   [Dipankar Sarkar](https://github.com/dipankar)
--   [Zac Nwogwugwu]
-(https://github.com/zacn04)
+-   [Shukant Pal](https://github.com/ShukantPal)
+-   [Rodrigo Mendoza-Smith](https://github.com/rodrgo)
+-   [Gaurav Varma](https://github.com/gaurav-varma)
+-   [Zac Nwogwugwu](https://github.com/zacn04)
