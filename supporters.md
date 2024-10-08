@@ -36,3 +36,4 @@
 -   [Dipankar Sarkar](https://github.com/dipankar)
 -   [Shukant Pal](https://github.com/ShukantPal)
 -   [Rodrigo Mendoza-Smith](https://github.com/rodrgo)
+-   [Gaurav Varma](https://github.com/gaurav-varma)
