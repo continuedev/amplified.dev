@@ -40,3 +40,4 @@
 -   [Zac Nwogwugwu](https://github.com/zacn04)
 -   [Delano Mandelbaum](https://github.com/delano)
 -   [Adi Rabinovich](https://github.com/adir1)
+-   [Larry Cai](https://github.com/larrycai)
