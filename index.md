@@ -27,7 +27,7 @@ As more of software development is automated, we are seeing more human engineeri
 <details>
 <summary>Chat model</summary>
 <br>
-<p>The “chat” model component is used to power question-answer experiences and is typically a 30B+ parameter model. Latency is not as important as it is for the “autocomplete” model, so most people choose the one that gives them the best possible responses, oftentimes opting for SaaS API endpoints. When SaaS isn’t possible or preferred, open-source models are self-hosted on a server for the entire team to use. Examples of models used for chat experiences include GPT-4, DeepSeek Coder 33B, Claude 3, Code Llama 70B, Llama 3 70B etc.</p>
+<p>The “chat” model component is used to power question-answer experiences and is typically a 30B+ parameter model. Latency is not as important as it is for the “autocomplete” model, so most people choose the one that gives them the best possible responses, oftentimes opting for SaaS API endpoints. When SaaS isn’t possible or preferred, open-source models are self-hosted on a server for the entire team to use. Examples of models used for chat experiences include GPT-4, DeepSeek Coder 33B, Claude 3, Code Llama 70B, Llama 3 70B, etc.</p>
 </details>
 
 <details>
@@ -67,13 +67,13 @@ Among the changes on the horizon are two new components (async engines and train
 <details>
 <summary>Training engine</summary>
 <br>
-<p>The training engine component or set of components would enable to use your <a href="https://continue.dev/docs/development-data">development data</a> to improve the LLMs you use. This could involve fine-tuning, domain adaptive continued pre-training, and / or pre-training models from scratch.</p>
+<p>The training engine component or set of components would enable you to use your <a href="https://continue.dev/docs/development-data">development data</a> to improve the LLMs you use. This could involve fine-tuning, domain adaptive continued pre-training, and/or pre-training models from scratch.</p>
 <h3>Fine-tuning</h3>
 <p>This approach is the most accessible to organizations in the near-term. A good rule of thumb is that this requires domain-specific instruction data and hundreds of GPU hours. The benefit of this approach is that it can shape the style and format of the suggestions for your organization and maybe even for particular teams or individual developers. This likely happens on a remote server using development data, though it could happen locally eventually. It could also become a continuous process that runs periodically like <a href="https://smol.ai/">smol.ai</a> and <a href="https://www.arcee.ai/">Arcee</a> are aiming to do.</p>
 <h3>Domain adaptive continued pre-training</h3>
 <p>This approach is likely to become more accessible to organizations in the medium-term. A good rule of thumb today is that this requires an open-source base model, billions of tokens of relevant company data, and thousands of GPU hours. Due to these requirements, this will almost certainly take place on a server. The benefit of this approach is that you can have a lot more control over model capabilities than what fine-tuning offers. This is how <a href="https://research.nvidia.com/publication/2023-10_chipnemo-domain-adapted-llms-chip-design">ChipNeMo was created by Nvidia</a> and how <a href="https://arxiv.org/pdf/2308.12950.pdf">Code Llama was created by Meta</a>, which both used Llama 2 as their base model.</p>
 <h3>Pre-training models from scratch</h3>
-<p>This approach is likely to become more accessible to organizations in the long-term. A good rule of thumb today is that this requires trillions of tokens of Internet data, billions of tokens of relevant company data, and millions of GPU hours. The benefit of this approach is that you get complete control over model capabilities by determining what data is used for training. It could also be the case that you use vendors to help with this. For example, today OpenAI <a href="https://openai.com/form/custom-models">will create custom GPT-4 models for you</a> with prices starting at $2-3M, MosaicML has trained models for organizations like <a href="https://blog.replit.com/llm-training">Replit</a>, and Together will <a href="https://www.together.ai/products#custom-models">help you build models from scratch</a> too.</p>
+<p>This approach is likely to become more accessible to organizations in the long term. A good rule of thumb today is that this requires trillions of tokens of Internet data, billions of tokens of relevant company data, and millions of GPU hours. The benefit of this approach is that you get complete control over model capabilities by determining what data is used for training. It could also be the case that you use vendors to help with this. For example, today OpenAI <a href="https://openai.com/form/custom-models">will create custom GPT-4 models for you</a> with prices starting at $2-3M, MosaicML has trained models for organizations like <a href="https://blog.replit.com/llm-training">Replit</a>, and Together will <a href="https://www.together.ai/products#custom-models">help you build models from scratch</a> too.</p>
 </details>
 <details>
 <summary>Trends</summary>
@@ -86,7 +86,7 @@ Among the changes on the horizon are two new components (async engines and train
     <li>Phind has a model aimed at <a href="https://www.phind.com/blog/introducing-phind-70b">being just as good as GPT-4 but faster</a></li>
     <li>Replit has a model aimed at <a href="https://twitter.com/pirroh/status/1775327316157358564?s=20">mimicking the behavior of LSP Code Actions</a></li>
     <li>Magic has a model aimed at <a href="https://x.com/magicailabs/status/1666116935904292869?s=20">being able to use entire codebases as context</a></li>
-    <li>Poolside has a model aimed at <a href="https://www.poolside.ai/">better helping with real world use cases</a></li>
+    <li>Poolside has a model aimed at <a href="https://www.poolside.ai/">better helping with real-world use cases</a></li>
 </ul>
 <p>We expect more and more specialized models to be created and dispersed over time.</p>
 <h3>Better toolchain integrations</h3>
@@ -135,11 +135,11 @@ Amplified developers need the freedom to use and reuse the right models and comp
 **Actions to take now**
 
 - Set up a proxy server to make LLMs available to developers
-- Make multiple models available and compare their usage
+- Make multiple models available and compare their usage and accuracy
 - Provide explicit guidance on how developers can test models locally
-- Ask developers to share about how they are using your AI dev system
+- Ask developers to share how they are using your AI dev system
 
-Situations and environments vary so much that developers are going to need figure out how to balance speed, quality, cost, and other constraints when automating part of their job. To do this, they need to be able to know about the models they are using and have choice over when, where, and how to use them.
+Situations and environments vary so much that developers are going to need to figure out how to balance speed, quality, cost, and other constraints when automating part of their job. To do this, they need to be able to know about the models they are using and have choice over when, where, and how to use them.
 
 The state-of-the-art is moving so fast that even models released six months ago can be outdated, so you don’t want to be locked into any particular vendor. You want to be able to constantly swap out and try different models. Empowering developers in this way will set them up to use the specific model best suited to each task (e.g. autocomplete, chat, re-rank, embed, etc.)
 
@@ -176,13 +176,13 @@ Amplified developers need clear guidance about how data should flow into and out
 
 You want to give LLMs as much relevant information as possible to get the best suggestions, so allowing for integrations but putting proper permissions that enable this will be important. This is both read and write access for not only human developers but also for the AI software development system.
 
-Already today you’ll want to deploy embeddings, a “chat” model, a remote configuration server, a shared index, and more, so you need permissions and integrations that enable you to index any codebase and reference it with context providers. There is also lots of data from across the software development lifecycle that you will want to pull in more and more over time (i.e. GitLab Issues, Confluence docs, etc) too.
+Already today you’ll want to deploy embeddings, a “chat” model, a remote configuration server, a shared index, and more, so you need permissions and integrations that enable you to index any codebase and reference it with context providers. There is also lots of data from across the software development lifecycle that you will want to pull in more and more over time (e.g. GitLab issues, Confluence docs, etc.).
 
 Best practices from web apps and DevOps apply here too. Permissions and integrations can get messy quick, so having a good approach here will set you up to evolve much better.
 
 ### 5. Adopt open-source interfaces
 
-Amplified developers need standardized interfaces (i.e. IDE extensions today), so that an open ecosystem can emerge within and across organizations.
+Amplified developers need standardized interfaces (e.g. IDE extensions), so that an open ecosystem can emerge within and across organizations.
 
 **Actions to take now**
 
