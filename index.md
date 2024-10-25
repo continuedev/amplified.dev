@@ -135,7 +135,7 @@ Amplified developers need the freedom to use and reuse the right models and comp
 **Actions to take now**
 
 - Set up a proxy server to make LLMs available to developers
-- Make multiple models available and compare their usage and accuracy
+- Make multiple models available and compare their usage
 - Provide explicit guidance on how developers can test models locally
 - Ask developers to share how they are using your AI dev system
 
