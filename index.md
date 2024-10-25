@@ -182,7 +182,7 @@ Best practices from web apps and DevOps apply here too. Permissions and integrat
 
 ### 5. Adopt open-source interfaces
 
-Amplified developers need standardized interfaces (e.g. IDE extensions), so that an open ecosystem can emerge within and across organizations.
+Amplified developers need standardized interfaces (i.e. IDE extensions today), so that an open ecosystem can emerge within and across organizations.
 
 **Actions to take now**
 
