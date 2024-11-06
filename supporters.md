@@ -43,3 +43,4 @@
 -   [Saransundar N](https://github.com/saransundarn1)
 -   [Larry Cai](https://github.com/larrycai)
 -   [Ivan Burazin](https://github.com/ivan-burazin)
+-   [Quinn Slack](https://slack.org)
