@@ -45,3 +45,4 @@
 -   [Ivan Burazin](https://github.com/ivan-burazin)
 -   [Quinn Slack](https://slack.org)
 -   [Andres March](https://www.mindha.us/)
+-   [Mihir Sahu](https://mihirsahu.com)
