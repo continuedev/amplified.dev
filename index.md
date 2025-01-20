@@ -92,9 +92,9 @@ Among the changes on the horizon are two new components (async engines and train
 <h3>Better toolchain integrations</h3>
 <p>We are seeing folks creating deeper, more custom integrations with their infrastructure:</p>
 <ul>
-    <li>Being able to use <a href="https://continue.dev/docs/customization/context-providers#jira-issues">Jira tickets</a> as context</li>
-    <li>Being able to use <a href="https://continue.dev/docs/customization/context-providers#documentation">documentation sites</a> as context</li>
-    <li>Being able to use <a href="https://continue.dev/docs/customization/context-providers#database-tables">database tables</a> as context</li>
+    <li>Being able to use <a href="https://continue.dev/docs/customization/context-providers#jira">Jira tickets</a> as context</li>
+    <li>Being able to use <a href="https://continue.dev/docs/customization/context-providers#docs">documentation sites</a> as context</li>
+    <li>Being able to use <a href="https://continue.dev/docs/customization/context-providers#database">database tables</a> as context</li>
 </ul>
 
 <p>We expect to increasingly see more of the software development lifecycle integrated. Eventually, we believe that “write action” integrations will emerge too (e.g. create a GitHub Issue).</p>
