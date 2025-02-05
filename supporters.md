@@ -50,3 +50,4 @@
 -   [Saad Farooq](https://github.com/qShloth)
 -   [Asif Jawed](https://github.com/aasif1297)
 -   [Jordan Five](https://github.com/fivelity)
+-   [Anton Malofeev](https://github.com/Arenukvern)
