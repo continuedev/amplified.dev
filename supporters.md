@@ -53,3 +53,4 @@
 -   [Jordan Five](https://github.com/fivelity)
 -   [Anton Malofeev](https://github.com/Arenukvern)
 -   [Willem Meints](https://github.com/wmeints)
+-   [Harry Kay](https://github.com/HarryKayNeezy)
