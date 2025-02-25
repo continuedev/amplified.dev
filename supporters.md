@@ -55,3 +55,4 @@
 -   [Willem Meints](https://github.com/wmeints)
 -   [Harry Kay](https://github.com/HarryKayNeezy)
 -   [Paul McKibbin (MaK)](https://github.com/blackrat)
+-   [Bruce Stagbrook](https://github.com/bstagbrook)
