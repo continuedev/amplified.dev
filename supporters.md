@@ -1,3 +1,4 @@
+-   [Francesco Oliva](https://github.com/olibartfast)
 -   [Ty Dunn](https://github.com/tydunn)
 -   [Nate Sesti](https://github.com/sestinj)
 -   [Jesse Robbins](https://github.com/jesserobbins)
