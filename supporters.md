@@ -58,3 +58,4 @@
 -   [Bruce Stagbrook](https://github.com/bstagbrook)
 -   [Guspan Tanadi](https://github.com/guspan-tanadi)
 -   [Francesco Oliva](https://github.com/olibartfast)
+-   [Chad Metcalf](https://github.com/metcalfc)
