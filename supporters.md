@@ -1,4 +1,3 @@
--   [Francesco Oliva](https://github.com/olibartfast)
 -   [Ty Dunn](https://github.com/tydunn)
 -   [Nate Sesti](https://github.com/sestinj)
 -   [Jesse Robbins](https://github.com/jesserobbins)
@@ -57,3 +56,4 @@
 -   [Harry Kay](https://github.com/HarryKayNeezy)
 -   [Paul McKibbin (MaK)](https://github.com/blackrat)
 -   [Bruce Stagbrook](https://github.com/bstagbrook)
+-   [Francesco Oliva](https://github.com/olibartfast)
