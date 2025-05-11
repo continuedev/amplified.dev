@@ -59,5 +59,6 @@
 -   [Guspan Tanadi](https://github.com/guspan-tanadi)
 -   [Francesco Oliva](https://github.com/olibartfast)
 -   [Chad Metcalf](https://github.com/metcalfc)
--   [GROW by LUMOS TELOS](https://github.com/salestracker)
+-   [Shubham Rasal](https://github.com/shubham-rasal)
+-   [Daniël Heesen](http://github.com/dheesen)
 -   [Akul Mathur](https://github.com/codecakes)
