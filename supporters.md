@@ -62,3 +62,4 @@
 -   [Shubham Rasal](https://github.com/shubham-rasal)
 -   [Daniël Heesen](http://github.com/dheesen)
 -   [Akul Mathur](https://github.com/codecakes)
+-   [Julien Tanay](https://github.com/Djiit)
