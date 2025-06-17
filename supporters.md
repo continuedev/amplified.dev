@@ -1,4 +1,3 @@
--   [Mike McGrath](https://github.com/devop-mmcgrath)
 -   [Ty Dunn](https://github.com/tydunn)
 -   [Nate Sesti](https://github.com/sestinj)
 -   [Jesse Robbins](https://github.com/jesserobbins)
@@ -63,3 +62,5 @@
 -   [Shubham Rasal](https://github.com/shubham-rasal)
 -   [Daniël Heesen](http://github.com/dheesen)
 -   [Akul Mathur](https://github.com/codecakes)
+-   [Julien Tanay](https://github.com/Djiit)
+-   [Mike McGrath](https://github.com/devop-mmcgrath)
