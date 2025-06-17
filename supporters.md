@@ -64,3 +64,4 @@
 -   [Akul Mathur](https://github.com/codecakes)
 -   [Julien Tanay](https://github.com/Djiit)
 -   [Mike McGrath](https://github.com/devop-mmcgrath)
+-   [Brian Douglas](https://github.com/bdougie)
