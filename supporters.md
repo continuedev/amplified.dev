@@ -67,3 +67,4 @@
 -   [Brian Douglas](https://github.com/bdougie)
 -   [Hrishikesh Barua](https://github.com/talonx)
 -   [Irfan Raza](https://github.com/irfaan008)
+-   [Jurie Smit](https://github.com/justaghost)
