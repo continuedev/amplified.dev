@@ -70,3 +70,4 @@
 -   [Rob Goodridge](https://github.com/robe070)
 -   [Jurie Smit](https://github.com/justaghost)
 -   [Praveen Soni](https://github.com/praveeno)
+-   [Nathaniel Davis](https://github.com/ntedvs)
