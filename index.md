@@ -2,7 +2,7 @@
 
 In the era of [Large Language Models (LLMs)](https://www.youtube.com/watch?v=zjkBMFhNj_g), software development is becoming increasingly automated by AI copilots. Many folks are forecasting that AI will replace developers in as little as a few years, while investors declare the arrival of superhuman AI software engineers. This worries some developers and annoys others.
 
-Our motivation with `amplified.dev` is to instead 1) empower developers and 2) raise awareness of systemic issues we’ve seen in how engineering organizations are adopting, using, and evolving AI software development systems.
+Our motivation with `amplified.dev` is to **(1) empower developers and (2) raise awareness of systemic issues** we’ve seen in how engineering organizations are adopting, using, and evolving AI software development systems.
 
 Our hope is that, over time, we can find a shared vocabulary for discussing these problems. For now, we describe the [current state of the world](#where-we-are-today), [where we are heading](#where-we-are-heading), and [what amplified developers need to do at their organizations today](#amplified-developers):
 
@@ -178,7 +178,7 @@ You want to give LLMs as much relevant information as possible to get the best s
 
 Already today you’ll want to deploy embeddings, a “chat” model, a remote configuration server, a shared index, and more, so you need permissions and integrations that enable you to index any codebase and reference it with context providers. There is also lots of data from across the software development lifecycle that you will want to pull in more and more over time (e.g. GitLab issues, Confluence docs, etc.).
 
-Best practices from web apps and DevOps apply here too. Permissions and integrations can get messy quick, so having a good approach here will set you up to evolve much better.
+Best practices from web apps and DevOps apply here too. Permissions and integrations can get messy quicky, so having a good approach here will set you up to evolve much better.
 
 ### 5. Adopt open-source interfaces
 
