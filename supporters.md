@@ -72,3 +72,4 @@
 -   [Praveen Soni](https://github.com/praveeno)
 -   [Nathaniel Davis](https://github.com/ntedvs)
 -   [Lucas Roberts](https://github.com/rlucas7)
+-   [Victor Morales](https://github.com/electrocucaracha)
