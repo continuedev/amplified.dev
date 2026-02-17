@@ -81,3 +81,4 @@ layout: supporters
 -   [Simon Massey](https://github.com/simbo1905)
 -   [Mahesh Madhav](https://github.com/heshpdx)
 -   [Alex Firestone](https://github.com/alexdfirestone)
+-   [Matthaus Krzykowski](https://github.com/matthauskrzykowski)
