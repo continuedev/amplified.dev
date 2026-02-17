@@ -1,23 +1,25 @@
 ---
 name: Deployment Architecture Awareness
-description: Ensure changes are compatible with the static site deployment pipeline and don't introduce unnecessary build dependencies.
+description: Ensure changes are compatible with the static site pipeline and don't introduce unnecessary build dependencies.
 ---
 
 # Deployment Architecture Awareness
 
 ## Context
 
-This site is deployed via Netlify, which auto-detects Jekyll from the `Gemfile` and `_config.yml`, runs `jekyll build`, and serves the `_site/` output from the `main` branch. The custom domain `amplified.dev` is configured in the Netlify dashboard. There is no `netlify.toml` or explicit build config in the repo — everything is inferred.
+This site is deployed via Netlify, which auto-detects Jekyll from the `Gemfile` and `_config.yml`, runs `jekyll build`, and serves the `_site/` output from the `main` branch. The custom domain `amplified.dev` is configured in the Netlify dashboard. There is no `netlify.toml` — everything is inferred.
 
-Critically, the main page (`index.html`) is a fully standalone HTML file with inline CSS and JS. It does not use Jekyll templates, Liquid, or markdown rendering. Jekyll merely copies it to `_site/` unchanged. The only files that still rely on Jekyll's markdown processing are `manifesto.md` and `supporters.md`.
+The main page (`index.html`) is a fully standalone HTML file with inline CSS, inline JS, and no Jekyll dependencies. Jekyll merely copies it to `_site/` unchanged. The only files that use Jekyll's markdown rendering are `manifesto.md` and `supporters.md`.
 
-A future migration to Vercel is planned, at which point the Jekyll dependency could be dropped entirely in favor of a zero-build static deploy.
+The image set is a mix of `.webp` (Nate's architectural pieces) and `.png` (Ty's watercolors) — all served as static files with no build-time processing.
+
+A migration to Vercel is planned, at which point the Jekyll dependency can be dropped entirely in favor of a zero-build static deploy.
 
 ## What to Check
 
 ### 1. No Unnecessary Jekyll Dependencies
 
-New pages should not introduce Jekyll-specific features (Liquid tags, front matter, `_includes`, `_data`) unless there is a clear reason. The site is moving toward plain static HTML.
+New pages should not introduce Jekyll-specific features (Liquid tags, front matter, `_includes`, `_data`). The site is moving toward plain static HTML.
 
 GOOD:
 ```html
@@ -39,9 +41,9 @@ title: New Page
 {% include header.html %}
 ```
 
-### 2. Assets Must Be Repo-Relative
+### 2. Assets Are Repo-Relative, Not Build-Dependent
 
-All image and asset paths in `index.html` use relative paths (`images/hero-7.webp`). Meta tags use absolute URLs (`https://amplified.dev/images/og.webp`). Don't introduce asset pipelines, CDN references, or build-time path rewriting that would break the standalone nature of the HTML.
+Image paths in `index.html` are relative (`images/hero-7.webp`). Meta tags use absolute URLs (`https://amplified.dev/images/og.webp`). Don't introduce asset pipelines, CDN references, or build-time path rewriting.
 
 GOOD:
 ```html
@@ -55,20 +57,20 @@ BAD:
 <img src="https://some-cdn.com/hero-7.webp" alt="..." />
 ```
 
-### 3. Deployment Happens on Push to Main
+### 3. Every Push to Main Is a Production Deploy
 
-There is no staging environment or preview deploy configured. Every push to `main` triggers a production build on Netlify. Changes should be reviewed before merging to `main`, not after.
+There is no staging environment or preview deploy. Every push to `main` triggers a production build on Netlify. Changes should be reviewed before merging to `main`, not after. This is especially important for image changes — a broken `og:image` reference means broken social cards immediately.
 
 ### 4. Keep the Build Minimal
 
-The Jekyll build exists only for `manifesto.md` and `supporters.md`. Don't add gems, plugins, or build steps to `Gemfile` or `_config.yml` unless they serve a clear purpose. The goal is to eventually drop the build step entirely.
+Don't add gems, plugins, or build steps to `Gemfile` or `_config.yml` unless they serve `manifesto.md` or `supporters.md`. The goal is to eventually drop the build entirely. When the Vercel migration happens, the site should work by pointing Vercel at the repo root with no build command.
 
 ## Key Files to Check
 
-- `index.html` — Main page, must remain self-contained
+- `index.html` — Main page, must remain fully self-contained
 - `_config.yml` — Jekyll config, should stay minimal
 - `Gemfile` — Build dependencies, avoid adding new ones
-- `images/` — Static assets served as-is
+- `images/` — Static assets served as-is (mix of `.webp` and `.png`)
 
 ## Exclusions
 

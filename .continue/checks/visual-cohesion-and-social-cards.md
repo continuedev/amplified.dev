@@ -1,13 +1,20 @@
 ---
 name: Visual Cohesion & Social Card Quality
-description: Ensure all visual assets — especially OG/social cards — are cohesive with the site's design identity and feel epic when shared.
+description: Ensure all visual assets are cohesive with the site's two-register aesthetic and social cards feel epic when shared.
 ---
 
 # Visual Cohesion & Social Card Quality
 
 ## Context
 
-This site has a strong, intentional aesthetic: cream backgrounds (`#F8F6F1`), watercolor-meets-architectural illustrations, lavender/blue-ink tones, and elegant serif/sans typography (Cormorant Garamond + DM Sans). When someone shares a link on Twitter, LinkedIn, or Slack, the social card is the first impression. It needs to feel like it belongs to the same world as the site — not like an afterthought or a generic placeholder. The OG image (`images/og.webp`) is referenced in `index.html` meta tags and must actually exist and look intentional.
+This site's imagery is a dialogue between two artistic registers, documented in HTML comments throughout `index.html`:
+
+- **Nate's pieces** (`hero-*.webp`) — structure-first, architectural scaffolding with organic life breaking through. Isometric grids, brutalist geometry, branches pushing out.
+- **Ty's pieces** (`ty-*.png`) — organic-first, watercolor bleeding outward with geometry crystallizing from it. Indigo/lavender washes, technical pen lines emerging from fluid forms.
+
+These two registers alternate throughout the essay to mirror the site's thesis: structure and life aren't opposed — they amplify each other. The palette is intentional: cream (`#F8F6F1`), lavender (`#7B6FA0`), blue-ink (`#4A5A8A`), indigo (`#4f46e5`), with white/cream backgrounds that work with `mix-blend-mode: multiply`.
+
+When someone shares a link on Twitter, LinkedIn, or Slack, the social card (`images/og.webp`) is the first impression. It must exist and feel like it belongs.
 
 ## What to Check
 
@@ -27,53 +34,47 @@ BAD:
 <!-- BUT images/og.webp does NOT exist — social cards will be blank -->
 ```
 
-### 2. Visual Consistency With Site Palette
+### 2. Two-Register Image Curation
 
-Any new images added to the site should feel like they belong to the existing visual language:
+Images in the essay alternate between Nate's architectural register and Ty's organic register. New images must belong to one of these two voices — not a third style. The HTML comments above each image block document which register it belongs to and why.
 
-- Watercolor/architectural illustration style with organic elements (branches, botanicals) growing through geometric structures
-- Color palette: cream, lavender (`#7B6FA0`), blue-ink (`#4A5A8A`), ink (`#1a1917`)
-- Light, airy backgrounds that work with `mix-blend-mode: multiply` on the cream body
-- No stock photos, no flat vector illustrations, no neon colors — these break the editorial, gallery-like tone
+- Nate images: geometric grids, isometric structures, scaffolding, branches growing *through* architecture
+- Ty images: watercolor washes, root systems, heartwood rings, river deltas, city grids as living tissue, geometry *emerging from* organic forms
+- Both use white/cream backgrounds, indigo-to-lavender color range, fine pen lines
 
-GOOD: A watercolor illustration of branches growing through isometric grid structures in purple/blue tones on a white/cream background.
+GOOD: Adding a new Ty-register image with a comment block explaining the prompt, the emotional beat, and why it sits where it does in the essay.
 
-BAD: A bright gradient banner with bold sans-serif text and a tech-startup look.
+BAD: Adding a stock photo, a flat vector, or a third artistic style that breaks the two-voice dialogue.
 
-### 3. Image Dimensions for Social Sharing
+### 3. Image Dimensions and Performance
 
-OG images should work well when cropped to common social card aspect ratios:
+- OG image (`og.webp`): ideally 1200x630, or a square with centered focal point that survives cropping
+- Page images: 1024x1024 source is fine — they render at 300-500px via CSS layout classes
+- All non-hero images must use `loading="lazy"` to avoid loading 8 images on first paint
+- No image should exceed ~300KB — the current largest is `ty-heartwood.png` at 295KB
 
-- Ideal OG image: 1200x630 (1.91:1 ratio) for `summary_large_image` Twitter cards and LinkedIn previews
-- If using a square source image (like the hero illustrations), the focal point should be centered so it survives center-cropping
-- The image should be legible and visually striking at small sizes (social cards render ~500px wide in feeds)
+### 4. Alt Text Describes Art Direction, Not Just Content
 
-### 4. Hero Images Match the Essay Tone
-
-Images interspersed throughout the essay in `index.html` should:
-
-- Alternate layouts naturally (`.layout-right`, `.layout-left`, `.layout-center`, `.layout-full`, `.image-pair`)
-- Not repeat the same image twice in close proximity
-- Progress in visual intensity — lighter/simpler near the top, more complex further down
-- Have meaningful `alt` text that describes both the artistic style and composition
+Alt text should describe the artistic style and composition, not just "an image." This is an art-directed editorial site, not a docs page.
 
 GOOD:
 ```html
-<img src="images/hero-9.webp" alt="Architectural watercolor — tree growing through isometric structure" />
+<img src="images/ty-roots.png"
+     alt="Watercolor roots spreading underground, geometry crystallizing where color is densest" />
 ```
 
 BAD:
 ```html
-<img src="images/hero-9.webp" alt="image" />
+<img src="images/ty-roots.png" alt="decorative image" />
 ```
 
 ## Key Files to Check
 
-- `index.html` — All `og:image`, `twitter:image` meta tags and inline `<img>` elements
-- `images/` — All visual assets, especially `og.webp`
+- `index.html` — Meta tags, `<img>` elements, and the HTML comments documenting image curation intent
+- `images/` — All visual assets; currently `hero-7.webp`, `hero-5.webp`, `hero-8.webp`, `hero.webp`, `ty-roots.png`, `ty-heartwood.png`, `ty-delta.png`, `ty-city.png`, `og.webp`
 
 ## Exclusions
 
 - `supporters.md` — No visual content
 - `manifesto.md` — Text-only content
-- Changes that only modify CSS without adding/changing images
+- CSS-only changes that don't add or swap images
