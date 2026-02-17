@@ -1,70 +1,61 @@
 ---
 name: Keyboard Section Navigation
-description: j/k navigation should feel like a purpose-built reader — moving between the essay's meaningful content blocks without touching browser defaults or the existing tab order.
+description: j/k moves you through the essay. That's it. No UI, no indicators, no announcements. If you know, you know.
 ---
 
 # Keyboard Section Navigation
 
 ## Context
 
-The site has 4 focusable elements (skip-link, CTA, 2 footer links). Keyboard users can Tab through those, but there's no way to navigate the essay's content sections — you're stuck with arrow keys and Space for raw scrolling. The `j`/`k` keys let you jump between the essay's meaningful content blocks: the hero, the five text sections, the two pull quotes, and the closing CTA.
+The site has a hidden `j`/`k` navigation system. It lets you jump between the essay's meaningful content blocks — the hero, the five text sections, the two pull quotes, and the closing CTA. Nine stops, in reading order.
 
-The system is desktop-only, shown-once hint, scroll-tracked. It should feel like infrastructure the reader discovers, not UI that demands attention.
+This is not a feature. It's not announced, not indicated, not onboarded. There is no visible trace of it on the page. It exists for people who already expect `j`/`k` to work because they've used vim, Gmail, or a hundred other tools that respect that convention. If you don't know it's there, you lose nothing. If you do, the essay becomes easier to read with a keyboard.
+
+This is the same philosophy as the easter egg: invisible until found, zero footprint when not used.
 
 ## What to Check
 
-### 1. j/k Are the Only Nav Keys
+### 1. Zero Visual Footprint
 
-Don't bind arrows, Space, Tab, or any other key. Those belong to the browser. `j` advances to the next stop, `k` goes back. That's the entire vocabulary.
+This is the most important rule. The navigation adds nothing visible to the page. No indicators, no highlights, no active states, no progress bars, no section counters, no hints, no tooltips, no onboarding messages, no "press j/k" prompts. Not even subtle ones. Not even ones that fade out. Not even ones that only show once.
 
-BAD: Binding `ArrowDown` or `Space` as aliases for `j`.
+If you're tempted to add visual feedback "just to help people discover it" — don't. Discovery is not the goal. The people who would use this already know to try it.
 
-### 2. The Stops Array Matches the Reading Flow
+BAD: `.nav-active` class, box-shadow indicators, "j / k to navigate" hints, progress dots, highlighted sections, any CSS that only exists to support this feature's visibility.
 
-The navigable stops are collected in DOM order: `.hero`, `.essay .section`, `.essay .pull-quote`, and `.closing`. That gives 9 stops total. Images, separators, and image pairs are skipped — they're breathing room, not reading destinations.
+### 2. j/k Are the Only Keys
 
-If a new content block is added to the essay, it should be added to the stops if and only if it carries argumentative weight. A new `.section` or `.pull-quote` will be picked up automatically by the selector. A decorative element should not be.
+Don't bind arrows, Space, Tab, or anything else. Those belong to the browser. `j` goes forward, `k` goes back. That's it.
 
-### 3. The Keydown Guards Stay in Sync with the Easter Egg
+### 3. The Stops Match the Reading Flow
 
-The nav keydown handler must skip the same targets as the easter egg:
-- `<input>`, `<textarea>`, or `contentEditable` elements
-- Modifier keys (Meta, Ctrl, Alt)
+Stops are collected in DOM order: `.hero`, `.essay .section`, `.essay .pull-quote`, `.closing`. Images, separators, and image pairs are skipped — they're breathing room, not arguments. If a new content block carries argumentative weight, the selector picks it up automatically. If it doesn't, it shouldn't be a stop.
 
-If the easter egg's guards change, these must change too. They share the same keyboard space and must agree on when to yield.
+### 4. The Keydown Guards Match the Easter Egg
 
-### 4. The Hint Is Shown Once and Only Once
+Same guards, same reasons:
+- Skip `<input>`, `<textarea>`, `contentEditable`
+- Skip modifier keys (Meta, Ctrl, Alt)
 
-The "j / k to navigate" hint appears either when the essay first enters the viewport (scroll trigger) or on first `j`/`k` press — whichever comes first. It auto-dismisses after 3 seconds. It is never shown again. No repeated prompts, no persistent UI. It's a whisper, not a tooltip.
+If the easter egg's guards change, these change too.
 
-The hint element has `aria-hidden="true"` — it's a visual affordance, not content for screen readers.
+### 5. Scroll Tracking and Keyboard Stay in Sync
 
-### 5. The Indicator Uses box-shadow, Not Pseudo-elements
+One `currentIndex`, written by both the IntersectionObserver and the keydown handler. If you scroll with the mouse and then press `j`, it continues from where you are. No second source of truth.
 
-The `.nav-active` class uses `box-shadow: -3px 0 0 0 rgba(123, 111, 160, 0.3)` for a subtle left-edge lavender line. This avoids conflicts with `.pull-quote::before` (which draws the top decorative rule) and keeps the approach uniform across all stop types. The indicator is skipped on the hero.
+### 6. Desktop Only
 
-BAD: Using `::before` or `::after` for the indicator — that would collide with pull-quote styling.
+`window.innerWidth > 768` gate at init. No observers, no listeners on mobile. There's no physical keyboard to use them with.
 
-### 6. Scroll Tracking and Keyboard Stay in Sync
+### 7. No Focus Management
 
-The IntersectionObserver (with `rootMargin: '-20% 0px -20% 0px'` and `threshold: 0.3`) and the keydown handler write to the same `currentIndex`. If the user scrolls with the mouse to a middle section and then presses `j`, navigation continues from where they are — not from where the last `j`/`k` left off. Don't add a second source of truth.
-
-### 7. Desktop Only
-
-The entire system — observer, keydown listener, hint — checks `window.innerWidth > 768` at init and does not initialize on mobile viewports. The CSS also hides `.nav-active` and `.nav-hint` at `max-width: 768px` as a safety net.
-
-### 8. No Focus Management on Sections
-
-Sections are `div` elements, not interactive. Don't add `tabindex`. The page's Tab order must remain exactly: skip-link, CTA, footer links. `j`/`k` scrolls the viewport — it does not move focus.
-
-BAD: Adding `tabindex="-1"` to sections and calling `.focus()` on navigation.
+Sections are `div`s, not interactive elements. No `tabindex`. Tab order stays exactly as it is: skip-link, CTA, footer links. `j`/`k` scrolls the viewport — it does not move focus.
 
 ## Key Files to Check
 
-- `index.html` — The nav CSS (search for "Section nav") and JS (search for "Section navigation")
+- `index.html` — search for "Section navigation" in the JS
 
 ## Exclusions
 
-- The specific visual parameters (shadow intensity, transition duration, hint timing) are tuning choices, not correctness issues
-- Whether 9 stops is the right number — that depends on the essay's content, not on this system
-- The 20% viewport offset for scroll positioning — that's a comfort preference
+- Scroll offset and easing are comfort preferences, not correctness issues
+- The number of stops depends on the essay's content

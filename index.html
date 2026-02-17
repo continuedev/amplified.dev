@@ -684,43 +684,6 @@
       }
     }
 
-    /* ─── Section nav indicator ─── */
-    .nav-active {
-      box-shadow: -3px 0 0 0 rgba(123, 111, 160, 0.3);
-      transition: box-shadow 0.4s ease;
-    }
-
-    .hero.nav-active {
-      box-shadow: none;
-    }
-
-    /* ─── Section nav hint ─── */
-    .nav-hint {
-      position: fixed;
-      bottom: 3rem;
-      left: 50%;
-      transform: translateX(-50%) translateY(10px);
-      font-family: var(--sans);
-      font-size: 0.75rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--ink-faint);
-      opacity: 0;
-      transition: opacity 0.6s ease, transform 0.6s ease;
-      pointer-events: none;
-      z-index: 9998;
-    }
-
-    .nav-hint.show {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0);
-    }
-
-    @media (max-width: 768px) {
-      .nav-active { box-shadow: none !important; }
-      .nav-hint { display: none; }
-    }
-
     /* ─── Easter egg ─── */
     body.amplified .section-text,
     body.amplified .pull-quote,
@@ -1097,34 +1060,7 @@
 
       var stops = Array.from(document.querySelectorAll('.hero, .essay .section, .essay .pull-quote, .closing'));
       var currentIndex = 0;
-      var hintShown = false;
       var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-      // Create hint element
-      var hint = document.createElement('div');
-      hint.className = 'nav-hint';
-      hint.setAttribute('aria-hidden', 'true');
-      hint.textContent = 'j / k to navigate';
-      document.body.appendChild(hint);
-
-      function showHint() {
-        if (hintShown) return;
-        hintShown = true;
-        hint.classList.add('show');
-        setTimeout(function() {
-          hint.classList.remove('show');
-        }, 3000);
-      }
-
-      function updateIndicator(index) {
-        stops.forEach(function(el, i) {
-          if (i === index) {
-            el.classList.add('nav-active');
-          } else {
-            el.classList.remove('nav-active');
-          }
-        });
-      }
 
       // Scroll tracking — keeps currentIndex in sync with viewport
       var navObserver = new IntersectionObserver(function(entries) {
@@ -1133,7 +1069,6 @@
             var index = stops.indexOf(entry.target);
             if (index !== -1) {
               currentIndex = index;
-              updateIndicator(index);
             }
           }
         });
@@ -1146,15 +1081,6 @@
         navObserver.observe(el);
       });
 
-      // Show hint when essay enters viewport
-      var essayObserver = new IntersectionObserver(function(entries) {
-        if (entries[0].isIntersecting) {
-          showHint();
-          essayObserver.disconnect();
-        }
-      }, { threshold: 0.1 });
-      essayObserver.observe(document.querySelector('.essay'));
-
       // Key handler
       document.addEventListener('keydown', function(e) {
         if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) return;
@@ -1163,8 +1089,6 @@
         var key = e.key.toLowerCase();
         if (key !== 'j' && key !== 'k') return;
 
-        showHint();
-
         if (key === 'j' && currentIndex < stops.length - 1) {
           currentIndex++;
         } else if (key === 'k' && currentIndex > 0) {
@@ -1172,8 +1096,6 @@
         } else {
           return;
         }
-
-        updateIndicator(currentIndex);
 
         var rect = stops[currentIndex].getBoundingClientRect();
         var targetY = window.pageYOffset + rect.top - (window.innerHeight * 0.2);
