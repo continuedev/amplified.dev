@@ -74,7 +74,23 @@ BAD:
 </div>
 ```
 
-### 5. Images and Text Breathe Together
+### 5. Hero Heading Line Break Is Sacred
+
+The hero heading reads "Developers amplified," on line one and "not automated" on line two. This line break is intentional at every screen size — it's the thesis of the entire site, and the two-line structure mirrors the two ideas (amplified vs. automated). The `<br>` must never be hidden or removed on any breakpoint.
+
+GOOD:
+```html
+<h1>Developers <em>amplified</em>, <br>not automated</h1>
+<!-- br is always visible, "not automated" is always on its own line -->
+```
+
+BAD:
+```css
+/* Hiding the br collapses the heading into one line on mobile */
+.hero h1 br { display: none; }
+```
+
+### 6. Images and Text Breathe Together
 
 Each image break sits between sections as a visual pause — giving the reader time to absorb what they just read before the next idea. The HTML comments document *why* each image sits where it does (e.g., "No clear structure yet. The feeling of being in it before the pattern is visible."). Content changes that remove image breaks or stack multiple text sections without visual breathing room break the essay's pacing.
 
