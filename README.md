@@ -26,11 +26,11 @@ The essay itself (`index.html`) needs no build step — open it in a browser.
 
 ## Contributing
 
-If you believe in a future where developers are amplified, not automated, [add your name](https://github.com/continuedev/amplified.dev/edit/main/supporters.md).
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide. The short version:
 
-Format: `-   [Your Name](https://github.com/yourusername)`
-
-PRs must have a real human credited as author or co-author. Agents are welcome to help, but a person must be attached.
+- **Add your name:** Edit [`supporters.md`](https://github.com/continuedev/amplified.dev/edit/main/supporters.md) and open a PR
+- **Work on the site:** Read the checks first, then branch and PR
+- PRs must have a real human credited as author or co-author
 
 ## Checks
 
@@ -50,7 +50,7 @@ The `.continue/checks/` directory contains AI-powered code review rules that run
 | **Repo Hygiene** | No staging dirs, no dead layouts, no OS junk, no orphaned files |
 | **Check Quality** | The checks themselves — judgment-based, project-specific, never stale |
 
-Each check has a `Context` section explaining why it exists, numbered rules with GOOD/BAD examples, and an `Exclusions` section for things that are intentionally out of scope.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for how to run them.
 
 ## Links
 

@@ -56,4 +56,3 @@ The `llms.txt` describes what the site is and what it means. It is not keyword-s
 ## Exclusions
 
 - The footer link to `continue.dev` — this is a credited attribution, not a promotion
-- `manifesto.md` — references Continue's docs as context for technical points, which is appropriate for that document

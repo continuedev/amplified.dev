@@ -70,7 +70,7 @@ If you can't say what a file does in one sentence, it probably shouldn't be here
 - `images/` — curated artwork
 - `assets/favicon.ico` — favicon
 - `robots.txt`, `sitemap.xml`, `llms.txt` — discoverability
-- `.gitignore`, `Gemfile`, `Gemfile.lock`, `.ruby-version`, `LICENSE`, `README.md` — repo infrastructure
+- `.gitignore`, `Gemfile`, `Gemfile.lock`, `.ruby-version`, `LICENSE`, `README.md`, `CONTRIBUTING.md` — repo infrastructure
 - `.continue/` — agent checks and guidelines
 
 If a file doesn't fit one of these categories, justify it or delete it.

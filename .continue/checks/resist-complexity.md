@@ -37,7 +37,7 @@ Don't extract shared CSS into a separate file "for reuse" when there are only th
 
 ### 5. The Gemfile Doesn't Grow
 
-The Gemfile exists for Jekyll, which exists for `manifesto.md` and `supporters.md`. Don't add gems unless they directly serve those two files. When the Vercel migration happens, the Gemfile should be deletable without affecting the main site.
+The Gemfile exists for Jekyll, which exists for `supporters.md`. Don't add gems unless they directly serve that file. When the Vercel migration happens, the Gemfile should be deletable without affecting the main site.
 
 ## Key Files to Check
 

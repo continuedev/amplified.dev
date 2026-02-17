@@ -9,7 +9,7 @@ description: Ensure changes are compatible with the static site pipeline and don
 
 This site is deployed via Netlify, which auto-detects Jekyll from the `Gemfile` and `_config.yml`, runs `jekyll build`, and serves the `_site/` output from the `main` branch. The custom domain `amplified.dev` is configured in the Netlify dashboard. There is no `netlify.toml` — everything is inferred.
 
-The main page (`index.html`) is a fully standalone HTML file with inline CSS, inline JS, and no Jekyll dependencies. Jekyll merely copies it to `_site/` unchanged. The only files that use Jekyll's markdown rendering are `manifesto.md` and `supporters.md`.
+The main page (`index.html`) is a fully standalone HTML file with inline CSS, inline JS, and no Jekyll dependencies. Jekyll merely copies it to `_site/` unchanged. The only file that uses Jekyll's markdown rendering is `supporters.md`.
 
 The image set is a mix of `.webp` (Nate's architectural pieces) and `.png` (Ty's watercolors) — all served as static files with no build-time processing.
 
@@ -63,7 +63,7 @@ There is no staging environment or preview deploy. Every push to `main` triggers
 
 ### 4. Keep the Build Minimal
 
-Don't add gems, plugins, or build steps to `Gemfile` or `_config.yml` unless they serve `manifesto.md` or `supporters.md`. The goal is to eventually drop the build entirely. When the Vercel migration happens, the site should work by pointing Vercel at the repo root with no build command.
+Don't add gems, plugins, or build steps to `Gemfile` or `_config.yml` unless they serve `supporters.md`. The goal is to eventually drop the build entirely. When the Vercel migration happens, the site should work by pointing Vercel at the repo root with no build command.
 
 ### 5. Canonical URL and SEO Fundamentals
 
@@ -100,5 +100,4 @@ BAD: Adding a new page but forgetting to add it to `sitemap.xml` and `llms.txt`,
 ## Exclusions
 
 - Changes to `supporters.md` — legitimately uses Jekyll's markdown rendering via `_layouts/supporters.html`
-- Changes to `manifesto.md` — legitimately uses Jekyll's markdown rendering
 - CSS/JS changes within `index.html` — these don't affect the build pipeline

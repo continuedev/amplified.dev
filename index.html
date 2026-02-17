@@ -291,7 +291,10 @@
     .image-break img {
       width: 100%;
       display: block;
+      transition: opacity 0.6s ease;
     }
+
+    .image-break img:hover { opacity: 0.85; }
 
     /* Alternating image layouts */
     .image-break.layout-right {
@@ -479,7 +482,10 @@
     .image-pair img {
       width: 100%;
       display: block;
+      transition: opacity 0.6s ease;
     }
+
+    .image-pair img:hover { opacity: 0.85; }
 
     .image-pair.offset img:first-child {
       margin-top: 2rem;
@@ -736,6 +742,95 @@
         padding-bottom: calc(2.5rem + env(safe-area-inset-bottom));
       }
     }
+    /* ─── Print ─── */
+    @media print {
+      body::before,
+      .grid-lines,
+      .scroll-hint,
+      .skip-link { display: none; }
+
+      html { font-size: 12pt; }
+      body { background: white; color: black; }
+
+      .page { max-width: none; padding: 0; }
+
+      .hero {
+        min-height: auto;
+        padding: 2rem 0;
+        page-break-after: always;
+      }
+
+      .hero-image-container {
+        width: 200px;
+        height: 200px;
+        opacity: 1;
+        transform: none;
+        animation: none;
+      }
+
+      .hero-image-container::before { display: none; }
+
+      .site-title,
+      .hero h1 {
+        opacity: 1;
+        transform: none;
+        animation: none;
+      }
+
+      .section-text,
+      .image-break,
+      .image-pair,
+      .pull-quote,
+      .sep {
+        opacity: 1;
+        transform: none;
+      }
+
+      .image-break { margin: 2rem 0; }
+      .image-break.layout-right,
+      .image-break.layout-left {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .image-break.layout-full {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .image-pair { margin: 2rem 0; }
+
+      .pull-quote {
+        page-break-inside: avoid;
+        border-top: 0.5pt solid #999;
+        padding-top: 1.5rem;
+      }
+
+      .pull-quote::before { display: none; }
+
+      .section { page-break-inside: avoid; }
+
+      .closing {
+        page-break-before: always;
+        border-top: none;
+        padding-top: 3rem;
+      }
+
+      footer::after {
+        content: 'amplified.dev';
+        display: block;
+        margin-top: 0.5rem;
+        font-size: 0.6rem;
+        color: #999;
+      }
+
+      .amplify-msg { display: none; }
+
+      a { color: inherit; text-decoration: none; }
+      .closing a { border-bottom: 0.5pt solid #999; }
+    }
+
   </style>
   <script type="application/ld+json">
   {
@@ -992,6 +1087,58 @@
     </footer>
 
   </div>
+
+  <!--
+    ═══════════════════════════════════════════════════════
+    COLOPHON
+    ═══════════════════════════════════════════════════════
+
+    You're reading the source. Good.
+
+    This is a single HTML file. No framework, no build step,
+    no dependencies beyond two Google Fonts. The CSS is inline.
+    The JavaScript is ~100 lines of vanilla DOM manipulation.
+    The entire site could be served from a USB stick.
+
+    TYPOGRAPHY
+    Cormorant Garamond (serif) — for the essay body and
+    pull quotes. Light weight, tall x-height, feels like
+    a book that takes itself seriously but not too seriously.
+    DM Sans — for infrastructure text: the site title,
+    footer, skip link. Small, uppercase, invisible until
+    you need it.
+
+    IMAGERY
+    The artwork alternates between two registers:
+
+    Nate's pieces — structure-first. Architectural
+    scaffolding, brutalist grids, geometric precision.
+    Then organic life breaks through: branches, flowers,
+    roots pushing through concrete. Structure becoming life.
+
+    Ty's pieces — organic-first. Watercolor washes of
+    indigo and lavender bleeding outward. Then geometry
+    crystallizes from the color: grid lines forming where
+    pigment pools, architecture emerging from nature.
+    Life becoming structure.
+
+    Together they're the visual thesis: the two forces
+    aren't opposed. They amplify each other.
+
+    COLORS
+    Cream (#F8F6F1) — warm, not clinical
+    Ink (#1a1917) — almost black, never pure black
+    Lavender (#7B6FA0) — the accent, used sparingly
+    The noise texture overlay is 3% opacity fractal noise.
+    The grid lines are 6% opacity lavender and blue-ink.
+
+    INTERACTIONS
+    Scroll-triggered reveals. An easter egg. j/k navigation.
+    A print stylesheet. That's it.
+
+    Made by Continue · https://continue.dev
+    ═══════════════════════════════════════════════════════
+  -->
 
   <script>
     // ─── Scroll-triggered reveals ───
