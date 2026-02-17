@@ -73,11 +73,26 @@ Don't add gems, plugins, or build steps to `Gemfile` or `_config.yml` unless the
 
 Google Fonts are loaded via `<link rel="preload" as="style">` followed by a regular `<link rel="stylesheet">`. The preload ensures the font CSS downloads in parallel with parsing. The fonts themselves use `display=swap`, so the page renders immediately with system fallbacks and swaps when fonts arrive. Don't remove the preload or change `display=swap` to `display=block` — that would block rendering on a third-party CDN.
 
+### 7. Discoverability Files Are Maintained
+
+The site has three root-level discoverability files that must stay in sync with the site's content:
+
+- **`llms.txt`** — Markdown file following the [llms.txt spec](https://llmstxt.org/) so LLMs and AI agents can understand the site. Must include an H1 with the site name, a blockquote summary of the essay's thesis, and links to the main content. If new pages are added, they should be listed here.
+- **`robots.txt`** — Allows all crawlers and points to the sitemap. Don't add `Disallow` rules unless there's a specific reason to block a path.
+- **`sitemap.xml`** — Lists all public URLs. If new pages are added, they must be added to the sitemap.
+
+GOOD: Adding a new page and updating all three files to reference it.
+
+BAD: Adding a new page but forgetting to add it to `sitemap.xml` and `llms.txt`, so search engines and LLMs don't know it exists.
+
 ## Key Files to Check
 
 - `index.html` — Main page, must remain fully self-contained
 - `404.html` — Must also be standalone HTML (no Jekyll layout dependency)
 - `_layouts/supporters.html` — Jekyll layout for `supporters.md`, the only legitimate Jekyll template
+- `llms.txt` — LLM discoverability, must stay in sync with site content
+- `robots.txt` — Crawler permissions, points to sitemap
+- `sitemap.xml` — All public URLs
 - `_config.yml` — Jekyll config, should stay minimal
 - `Gemfile` — Build dependencies, avoid adding new ones
 - `images/` — Static assets served as-is (mix of `.webp` and `.png`)

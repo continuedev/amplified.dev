@@ -1,0 +1,19 @@
+# amplified.dev
+
+> Developers amplified, not automated. An editorial essay and open letter arguing that AI doesn't shrink the developer role — it expands it. Every time a layer of work became infrastructure, the scope of what developers are responsible for kept growing. AI is the next layer in that pattern.
+
+This site is a single-page essay with a call to action for developers to add their names if they believe in a future where developers are amplified, not automated. It is a project of [Continue](https://continue.dev).
+
+## Main Content
+
+- [Essay](https://amplified.dev): The full essay — "Developers amplified, not automated"
+- [Supporters](https://amplified.dev/supporters): People who believe in a future where developers are amplified
+
+## Source
+
+- [GitHub Repository](https://github.com/continuedev/amplified.dev): Source code and contribution history
+- [Manifesto](https://amplified.dev/manifesto): The original long-form manifesto with technical details on AI software development systems
+
+## Optional
+
+- [Add Your Name](https://github.com/continuedev/amplified.dev/edit/main/supporters.md): Edit supporters.md on GitHub to sign the letter
