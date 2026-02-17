@@ -44,7 +44,7 @@ It should cover:
 - Architecture (what files do what, how it's hosted)
 - Dev setup (accurate commands that actually work)
 - How to contribute (link to supporters.md edit)
-- That `.continue/checks/` exists and matters
+- That `.continue/rules/` exists and matters
 
 It should NOT contain:
 - Badges, shields, or status indicators

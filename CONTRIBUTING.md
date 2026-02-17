@@ -16,7 +16,7 @@ See the README for [architecture and dev setup](README.md#architecture). Before 
 
 ### Philosophy
 
-The site has a specific taste. Before making changes, read the checks in `.continue/checks/` — they encode the design decisions that matter. A few principles that come up repeatedly:
+The site has a specific taste. Before making changes, read the rules in `.continue/rules/` — they encode the design decisions that matter. A few principles that come up repeatedly:
 
 - **Do less, but mean it.** No feature flags, no configuration, no "just in case" code.
 - **Hidden features stay hidden.** Things like keyboard navigation (`j`/`k`) and the easter egg have zero visual footprint. No hints, no indicators, no onboarding. If you know, you know.

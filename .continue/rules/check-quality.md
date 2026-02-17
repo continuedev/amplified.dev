@@ -7,7 +7,7 @@ description: Checks are the site's immune system. They should be judgment-based,
 
 ## Context
 
-The `.continue/checks/` directory is the institutional memory of this project. Each check encodes a decision that was made, usually after something went wrong or almost went wrong. They run on every PR as AI-powered code review rules — targeting issues that require judgment and context, not things a linter can catch.
+The `.continue/rules/` directory is the institutional memory of this project. Each check encodes a decision that was made, usually after something went wrong or almost went wrong. They run on every PR as AI-powered code review rules — targeting issues that require judgment and context, not things a linter can catch.
 
 There are currently 10 checks. That number should grow slowly. A bad check is worse than no check — it trains reviewers (human and AI) to ignore the checks entirely.
 
@@ -66,7 +66,7 @@ When a check includes examples, they should reference actual patterns from this 
 
 ## Key Files to Check
 
-- `.continue/checks/` — all check files
+- `.continue/rules/` — all check files
 
 ## Exclusions
 

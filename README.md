@@ -34,7 +34,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide. The short version:
 
 ## Checks
 
-The `.continue/checks/` directory contains AI-powered code review rules that run on every PR. They encode the site's design decisions — the things that require judgment, not lint. Read them before contributing.
+The `.continue/rules/` directory contains AI-powered code review rules that run on every PR. They encode the site's design decisions — the things that require judgment, not lint. Read them before contributing.
 
 | Check | What it protects |
 |---|---|
