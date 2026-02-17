@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>amplified.dev — Developers amplified, not automated</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
-  <meta name="description" content="Something is happening in how developers talk about their work. The unease isn't about the tools. It's about identity.">
+  <meta name="description" content="Every time a layer of the work became infrastructure, the role didn't shrink. The scope kept expanding. AI is the next layer in it.">
   <meta property="og:title" content="Developers amplified, not automated">
   <meta property="og:description" content="Every time a layer of the work became infrastructure, the role didn't shrink. AI is the next layer in it.">
   <meta property="og:type" content="website">
@@ -457,6 +457,31 @@
       }
     }
 
+    /* ─── Reduced motion ─── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .section-text,
+      .image-break,
+      .image-pair,
+      .pull-quote,
+      .sep {
+        opacity: 1;
+        transform: none;
+      }
+      .hero-image-container,
+      .site-title,
+      .hero h1,
+      .scroll-hint {
+        opacity: 1;
+        transform: none;
+        animation: none;
+      }
+    }
+
     /* ─── Responsive ─── */
     @media (max-width: 768px) {
       html { font-size: 16px; }
@@ -502,12 +527,7 @@
       }
 
       .image-break.layout-right,
-      .image-break.layout-left {
-        width: calc(100% + 2.5rem);
-        margin-left: -1.25rem;
-        margin-right: -1.25rem;
-      }
-
+      .image-break.layout-left,
       .image-break.layout-full {
         width: calc(100% + 2.5rem);
         margin-left: -1.25rem;
@@ -515,7 +535,7 @@
       }
 
       .image-break.layout-center {
-        width: 90%;
+        width: 85%;
         margin-left: auto;
         margin-right: auto;
       }
@@ -525,8 +545,9 @@
         gap: 0.75rem;
       }
 
+      /* Pull quotes stay strong on tablet */
       .pull-quote {
-        font-size: 1.35rem;
+        font-size: 1.5rem;
         padding: 2rem 0;
         margin: 2.5rem 0;
       }
@@ -534,11 +555,17 @@
       .sep { margin: 3.5rem 0; }
 
       .closing {
-        padding: 1.5rem 0 5rem;
+        padding: 2rem 0 5rem;
       }
 
       .closing p {
         font-size: 1.05rem;
+      }
+
+      /* Bigger touch target for CTA */
+      .closing a {
+        display: inline-block;
+        padding: 0.3em 0;
       }
 
       .scroll-hint { bottom: 2rem; }
@@ -548,49 +575,50 @@
     }
 
     @media (max-width: 480px) {
-      .page { padding: 0 1rem; }
+      .page { padding: 0 1.25rem; }
 
       .hero-image-container {
-        width: 180px;
-        height: 180px;
+        width: 200px;
+        height: 200px;
         margin-bottom: 2rem;
       }
 
       .hero h1 {
-        font-size: 1.7rem;
+        font-size: 1.8rem;
       }
 
       .section p {
         font-size: 1rem;
-        line-height: 1.7;
+        line-height: 1.75;
         margin-bottom: 1.2rem;
       }
 
+      /* Image pairs stay side by side — they're a dialogue */
       .image-pair {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
         margin: 3rem -0.5rem;
       }
 
       .image-pair.offset img:first-child {
-        margin-top: 0;
+        margin-top: 1rem;
       }
 
       .image-break.layout-right,
-      .image-break.layout-left {
-        width: calc(100% + 2rem);
-        margin-left: -1rem;
-        margin-right: -1rem;
-      }
-
+      .image-break.layout-left,
       .image-break.layout-full {
-        width: calc(100% + 2rem);
-        margin-left: -1rem;
-        margin-right: -1rem;
+        width: calc(100% + 2.5rem);
+        margin-left: -1.25rem;
+        margin-right: -1.25rem;
       }
 
+      .image-break.layout-center {
+        width: 80%;
+      }
+
+      /* Pull quotes are the emotional beats — keep them felt */
       .pull-quote {
-        font-size: 1.2rem;
+        font-size: 1.35rem;
         padding: 1.5rem 0;
         margin: 2rem 0;
       }
@@ -620,101 +648,220 @@
 
   <div class="page">
 
-    <!-- ═══ HERO ═══ -->
+    <!-- ═══════════════════════════════════════════════════
+         HERO
+         ═══════════════════════════════════════════════════
+         NATE — structure-first, life emerging
+         The threshold. Both registers meeting.
+         Tree growing through scaffolding. The promise.
+         ═══════════════════════════════════════════════════ -->
     <header class="hero">
       <div class="hero-image-container">
-        <img src="images/hero-7.webp" alt="Watercolor illustration of organic branches growing through architectural grid structures" />
+        <img src="images/hero-7.webp"
+             alt="Architectural scaffolding with organic branches growing through" />
       </div>
       <p class="site-title">amplified.dev</p>
-      <h1>Developers <em>amplified</em>,<br> not automated</h1>
+      <h1>Developers <em>amplified</em>, <br>not automated</h1>
       <div class="scroll-hint"><span></span></div>
     </header>
 
     <!-- ═══ ESSAY ═══ -->
     <main class="essay">
 
-      <!-- Section 1: The Landscape -->
+      <!-- ─── Section 1: The Landscape ─── -->
+      <!-- Present tense. Chaos. The questions everyone's asking. -->
       <div class="section">
         <div class="section-text">
-          <p>Teams everywhere are shipping faster than they ever have. Codebases are growing in ways that don't map to headcount. Junior engineers are standing up services in hours that used to take senior devs a week. Pull requests are multiplying faster than anyone can review them. Companies are posting record output, and the people doing the work are quietly wondering what all of it means.</p>
+          <p>Something shifted. You can feel it even if you can't name it yet. Codebases are growing in ways that don't map to headcount. Junior engineers are standing up services in hours that used to take senior devs a week. Pull requests are multiplying faster than anyone can review them. The output is everywhere, and the people doing the work are quietly wondering what all of it means.</p>
           <p>The questions are real. What does seniority look like when a new grad with good prompts can generate the same code you can? Who owns the quality of something nobody fully read? What happens when models can express intent more fluently than most of your team? What exactly should you get great at right now?</p>
         </div>
       </div>
 
       <div class="sep"><div class="dot"></div></div>
 
-      <!-- Image break -->
+      <!-- ═══════════════════════════════════════════════════
+           IMAGE: after-questions
+           ═══════════════════════════════════════════════════
+           TY — organic-first, structure crystallizing
+           Watercolor bleeding outward like roots spreading.
+           No clear structure yet. The feeling of being in it
+           before the pattern is visible. Mycorrhizal network.
+           Asymmetric, weighted to one corner.
+
+           PROMPT:
+           Abstract ink and watercolor illustration on a
+           #FFFFFF white background. Drawn with a 0.3mm
+           technical pen in black ink. Organic watercolor wash
+           of translucent indigo (#4f46e5) and lavender
+           (#7c3aed) bleeding outward like roots spreading
+           underground, wet-on-wet with soft feathered edges.
+           Fine geometric lines emerge FROM the organic forms,
+           as if the color is crystallizing into architecture.
+           Grid fragments forming where the pigment is densest.
+           Sparse. Most of the image is untouched #FFFFFF white.
+           No text. --ar 1:1 --s 250 --no text, letters, words
+           ═══════════════════════════════════════════════════ -->
       <div class="image-break layout-right">
-        <img src="images/hero-9.webp" alt="Architectural watercolor — tree growing through isometric structure" />
+        <img src="images/ty-roots.png"
+             loading="lazy"
+             alt="Watercolor roots spreading underground, geometry crystallizing where color is densest" />
       </div>
 
-      <!-- Section 2: The Pattern -->
+      <!-- ─── Section 2: The Pattern ─── -->
+      <!-- History. The consistent arc. Every shift expanded the role. -->
       <div class="section">
         <div class="section-text">
-          <p>Those questions get easier once you look at what's happened before. Not because you personally lived through every shift, but because the pattern is so consistent it's almost boring.</p>
-          <p>Developers used to manage memory by hand. Then languages and runtimes handled it, and developers took on data structures and algorithms at a higher level. Developers used to provision bare metal. Then the cloud handled it, and developers took on distributed systems, scaling, availability. Developers used to hand-roll deployments. Then CI/CD handled it, and developers took on release strategy, observability, production ownership.</p>
-          <p>Every time a layer of the work became infrastructure, the role didn't shrink. The scope of what a developer is responsible for kept expanding. Each time, the work moved up. Closer to the user. Closer to the system's real behavior. Closer to the outcome.</p>
+          <p>Those questions get easier once you look at what's happened before. Not because you lived through every shift, but because the pattern is so consistent it's almost boring.</p>
+          <p>Developers used to manage memory by hand. Then languages handled it, and developers moved up to data structures and algorithms. They used to provision bare metal. Then the cloud handled it, and they moved up to distributed systems, scaling, availability. They used to hand-roll deployments. Then CI/CD handled it, and they moved up to release strategy, observability, production ownership.</p>
+          <p>Every time a layer of the work became infrastructure, the role didn't shrink. It expanded. Each time, the work moved up. Closer to the user. Closer to the system's real behavior. Closer to the outcome.</p>
         </div>
       </div>
 
+      <!-- The essay's hinge — the reader sees the pattern -->
       <div class="pull-quote">
         That's the trajectory. AI doesn't break that trend. It's the next layer <em>in it.</em>
       </div>
 
-      <!-- Image pair -->
+      <!-- ═══════════════════════════════════════════════════
+           IMAGE PAIR: the-hinge
+           ═══════════════════════════════════════════════════
+           BOTH — the two registers in dialogue. Side by side.
+           This is the visual thesis of the whole page.
+
+           LEFT — NATE: Structure with life breaking through.
+           Brutalist grid, branches pushing out.
+           (Use one of the existing strong architectural pieces)
+
+           RIGHT — TY: Life with structure emerging.
+           Watercolor spreading, geometry forming from it.
+
+           PROMPT (Ty's half):
+           Abstract ink and watercolor illustration on a
+           #FFFFFF white background. Translucent indigo
+           (#4f46e5) and lavender (#7c3aed) watercolor pooling
+           in the center like a cross-section of heartwood
+           rings, wet-on-dry with clean edges. 0.3mm technical
+           pen lines radiate outward from the color, becoming
+           more precise and geometric the further they extend
+           from the organic center. The transition from fluid
+           to architectural is gradual and inevitable. Sparse.
+           Most of the image is untouched #FFFFFF white. No
+           text. --ar 1:1 --s 250 --no text, letters, words
+           ═══════════════════════════════════════════════════ -->
       <div class="image-pair offset">
-        <img src="images/hero-5.webp" alt="Watercolor branches through geometric blocks" />
-        <img src="images/hero-3.webp" alt="Architectural sketch with watercolor botanical elements" />
+        <img src="images/hero-5.webp"
+             loading="lazy"
+             alt="Geometric scaffolding with watercolor branches breaking through the grid" />
+        <img src="images/ty-heartwood.png"
+             loading="lazy"
+             alt="Watercolor pooling like heartwood rings with geometry radiating outward" />
       </div>
 
-      <!-- Section 3: Code is Abundant -->
+      <!-- ─── Section 3: Code is Abundant ─── -->
+      <!-- The fork in the road. Curators or builders. -->
       <div class="section">
         <div class="section-text">
-          <p>Code is abundant now. Not slightly easier to write, but abundant the way compute became abundant when the cloud showed up. More PRs, more generated systems, more output than any team was built to absorb.</p>
-          <p>You can look at that and see a future where developers are curators of machine output, reviewing an endless stream of generated code until the machines don't need the review anymore. Or you can look at it and see something better: a future where developers build the systems that channel all of that output toward outcomes that actually matter. Not just reading PRs, but defining what good means for their codebase, their architecture, their product. Not just prompting AI, but designing the processes, the constraints, the feedback loops that make AI output trustworthy at scale.</p>
+          <p>Code is abundant now. Not slightly easier to write—abundant the way compute became abundant when the cloud showed up. More PRs, more generated systems, more output than any team was built to absorb.</p>
+          <p>You can look at that and see a future where developers are curators of machine output, reviewing an endless stream of generated code until the machines don't need the review anymore. Or you can look at it and see something better: developers building the systems that channel all of that output toward outcomes that actually matter. Not just reading PRs, but defining what good means for their codebase, their architecture, their product. Not just prompting AI, but designing the processes, the constraints, the feedback loops that make AI output trustworthy at scale.</p>
         </div>
       </div>
 
       <div class="sep"><div class="dot"></div></div>
 
+      <!-- ═══════════════════════════════════════════════════
+           IMAGE: the-fork
+           ═══════════════════════════════════════════════════
+           TY — organic-first
+           River delta / root system viewed from above.
+           Geometry crystallizing at intersections.
+           Branching futures, not one path.
+
+           PROMPT:
+           Abstract ink and watercolor illustration on a
+           #FFFFFF white background. A single branching form
+           rendered in translucent indigo (#4f46e5) watercolor
+           spreads diagonally like a river delta or root system
+           viewed from above. Where branches meet and cross,
+           fine 0.3mm technical pen lines trace precise right
+           angles and grid intersections, as if the organic
+           growth is teaching itself geometry. Lavender
+           (#7c3aed) washes at the tips. Asymmetric
+           composition, weighted to one corner. Most of the
+           image is untouched #FFFFFF white. No text.
+           --ar 1:1 --s 250 --no text, letters, words
+           ═══════════════════════════════════════════════════ -->
       <div class="image-break layout-center">
-        <img src="images/hero-2.webp" alt="Watercolor branches emerging through architectural framework" />
+        <img src="images/ty-delta.png"
+             loading="lazy"
+             alt="River delta branching form with geometry emerging at each intersection" />
       </div>
 
+      <!-- ─── The Pivot ─── -->
+      <!-- Tension point. Two paths. -->
       <div class="section">
         <div class="section-text">
           <p>One of those paths ends with developers writing curly braces until the curly braces don't need them. The other ends with developers doing the most interesting work of their careers.</p>
         </div>
       </div>
 
-      <!-- Image break -->
+      <!-- ═══════════════════════════════════════════════════
+           IMAGE: the-tension
+           ═══════════════════════════════════════════════════
+           NATE — structure-first, strongest architectural piece
+           Scaffolding dominates but flowers push through.
+           The tension between being replaced and being amplified.
+           (Use one of Nate's densest, most structural pieces)
+           ═══════════════════════════════════════════════════ -->
       <div class="image-break layout-left">
-        <img src="images/hero-8.webp" alt="Scaffolding and organic growth in watercolor" />
+        <img src="images/hero-8.webp"
+             loading="lazy"
+             alt="Dense architectural scaffolding with delicate flowers forcing through" />
       </div>
 
       <div class="pull-quote">
         The work doesn't disappear. It <em>moves up.</em>
       </div>
 
-      <!-- Section 4: Amplified -->
+      <!-- ─── Section 4: Amplified ─── -->
+      <!-- The resolution. Volume and signal. Go build. -->
       <div class="section">
         <div class="section-text">
           <p>That's what amplified means. A way of working where AI handles the volume and you handle the signal.</p>
-          <p>No generation of developers has had this much leverage. The tools are here, the work is real, and it's yours. Go build.</p>
+          <p>No generation of developers has had this much leverage. The tools are here, the work is real, and it's yours.</p>
         </div>
       </div>
 
       <div class="sep"><div class="dot"></div></div>
 
-      <!-- Image pair -->
+      <!-- ═══════════════════════════════════════════════════
+           IMAGE PAIR: the-resolution
+           ═══════════════════════════════════════════════════
+           BOTH — the place and the idea
+
+           LEFT — TY: 2nd and Howard city-grid watercolor.
+           San Francisco's actual grid as living tissue.
+           The place where this is happening right now.
+           (Use one of the "story of 2nd and Howard" pieces)
+
+           RIGHT — NATE: Tree-through-brutalism.
+           The metaphor fully realized. The most resolved,
+           most beautiful tree-and-scaffolding image.
+
+           Together: ground truth and vision.
+           ═══════════════════════════════════════════════════ -->
       <div class="image-pair">
-        <img src="images/hero-4.webp" alt="Delicate flowers growing through architectural beams" />
-        <img src="images/hero.webp" alt="Purple branches intertwined with grid structure" />
+        <img src="images/ty-city.png"
+             loading="lazy"
+             alt="San Francisco street grid rendered as watercolor — the city as living tissue" />
+        <img src="images/hero.webp"
+             loading="lazy"
+             alt="Tree growing through brutalist architecture — the metaphor fully realized" />
       </div>
 
     </main>
 
     <!-- ═══ CLOSING ═══ -->
+    <!-- No image after this. White space is the last image. -->
     <section class="closing">
       <p><em>If you believe in a future where developers are amplified, not automated,</em> <a href="https://github.com/continuedev/amplified.dev/edit/main/supporters.md" target="_blank" rel="noopener">add your name</a>.</p>
     </section>
