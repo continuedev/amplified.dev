@@ -112,5 +112,4 @@ BAD: A 404 that says "Oops! Something went wrong. Please try again later." — g
 ## Exclusions
 
 - `supporters.md` — The names list itself (not the surrounding copy)
-- `manifesto.md` — Separate document with its own voice (more technical, less personal)
 - Changes to CSS animations, layout classes, or responsive breakpoints — these affect presentation, not editorial voice
