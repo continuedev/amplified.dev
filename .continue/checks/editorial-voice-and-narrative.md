@@ -94,13 +94,23 @@ BAD:
 
 Each image break sits between sections as a visual pause — giving the reader time to absorb what they just read before the next idea. The HTML comments document *why* each image sits where it does (e.g., "No clear structure yet. The feeling of being in it before the pattern is visible."). Content changes that remove image breaks or stack multiple text sections without visual breathing room break the essay's pacing.
 
+### 7. Secondary Pages Carry the Voice
+
+The 404 page and supporters page have their own copy, and it should feel like the same author wrote them. The 404 says "This page *moved up*" — a wink at the essay's thesis. The supporters page says "Developers who believe in *amplified*." These aren't throwaway strings. New pages or copy changes on secondary pages should maintain the same understated confidence and self-awareness.
+
+GOOD: A 404 that references the essay's language ("moved up") without over-explaining the joke.
+
+BAD: A 404 that says "Oops! Something went wrong. Please try again later." — generic, corporate, no personality.
+
 ## Key Files to Check
 
 - `index.html` — All `<p>` content within `.section-text` divs, `.pull-quote` elements, and `.closing` section
+- `404.html` — Copy must carry the site's voice
+- `_layouts/supporters.html` — Heading and CTA copy must carry the site's voice
 - HTML comments above each section and image block — these document editorial intent
 
 ## Exclusions
 
-- `supporters.md` — Contributor list, no editorial content
+- `supporters.md` — The names list itself (not the surrounding copy)
 - `manifesto.md` — Separate document with its own voice (more technical, less personal)
 - Changes to CSS animations, layout classes, or responsive breakpoints — these affect presentation, not editorial voice

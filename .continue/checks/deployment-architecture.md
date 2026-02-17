@@ -65,14 +65,25 @@ There is no staging environment or preview deploy. Every push to `main` triggers
 
 Don't add gems, plugins, or build steps to `Gemfile` or `_config.yml` unless they serve `manifesto.md` or `supporters.md`. The goal is to eventually drop the build entirely. When the Vercel migration happens, the site should work by pointing Vercel at the repo root with no build command.
 
+### 5. Canonical URL and SEO Fundamentals
+
+`index.html` must include `<link rel="canonical" href="https://amplified.dev">` to prevent search engines from indexing `www.amplified.dev` and `amplified.dev` as separate sites. Don't remove or change this.
+
+### 6. Font Loading Is Resilient
+
+Google Fonts are loaded via `<link rel="preload" as="style">` followed by a regular `<link rel="stylesheet">`. The preload ensures the font CSS downloads in parallel with parsing. The fonts themselves use `display=swap`, so the page renders immediately with system fallbacks and swaps when fonts arrive. Don't remove the preload or change `display=swap` to `display=block` — that would block rendering on a third-party CDN.
+
 ## Key Files to Check
 
 - `index.html` — Main page, must remain fully self-contained
+- `404.html` — Must also be standalone HTML (no Jekyll layout dependency)
+- `_layouts/supporters.html` — Jekyll layout for `supporters.md`, the only legitimate Jekyll template
 - `_config.yml` — Jekyll config, should stay minimal
 - `Gemfile` — Build dependencies, avoid adding new ones
 - `images/` — Static assets served as-is (mix of `.webp` and `.png`)
 
 ## Exclusions
 
-- Changes to `supporters.md` or `manifesto.md` — these legitimately use Jekyll's markdown rendering
+- Changes to `supporters.md` — legitimately uses Jekyll's markdown rendering via `_layouts/supporters.html`
+- Changes to `manifesto.md` — legitimately uses Jekyll's markdown rendering
 - CSS/JS changes within `index.html` — these don't affect the build pipeline

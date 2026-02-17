@@ -76,13 +76,40 @@ BAD:
 <img src="images/ty-roots.png" alt="decorative image" />
 ```
 
+### 6. Every Page Belongs to the Same World
+
+The site is more than `index.html`. The 404 page (`404.html`), the supporters page (`_layouts/supporters.html` + `supporters.md`), and any future pages must share the same cream background, noise texture, serif/sans typography, and lavender accent color. A visitor who hits a 404 or clicks through to supporters should never feel like they left the site.
+
+GOOD: `404.html` uses the same `--cream`, `--serif`, `--lavender` variables, noise texture overlay, and on-brand copy ("This page *moved up*").
+
+BAD: A 404 page using the default Jekyll theme with white background and system fonts.
+
+### 7. Focus Styles Use the Site Palette
+
+Every interactive element (links, buttons) must have `:focus-visible` styles using the lavender accent — not the browser default blue outline. This is both accessibility and aesthetic: keyboard users should feel like the site was designed for them too.
+
+GOOD:
+```css
+.closing a:focus-visible {
+  outline: 1.5px solid var(--lavender);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+```
+
+BAD:
+```css
+/* No focus styles at all, or browser default blue ring */
+```
+
 ## Key Files to Check
 
-- `index.html` — Meta tags, `<img>` elements, and the HTML comments documenting image curation intent
+- `index.html` — Meta tags, `<img>` elements, focus styles, and the HTML comments documenting image curation intent
+- `404.html` — Must match site aesthetic
+- `_layouts/supporters.html` — Must match site aesthetic
 - `images/` — All visual assets; currently `hero-7.webp`, `hero-5.webp`, `hero-8.webp`, `hero.webp`, `ty-roots.png`, `ty-heartwood.png`, `ty-delta.png`, `ty-city.png`, `og.webp`
 
 ## Exclusions
 
-- `supporters.md` — No visual content
-- `manifesto.md` — Text-only content
+- `manifesto.md` — Text-only content rendered by Jekyll's default layout (legacy)
 - CSS-only changes that don't add or swap images
