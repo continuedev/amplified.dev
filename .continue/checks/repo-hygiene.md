@@ -35,7 +35,30 @@ The `_config.yml` `exclude:` list should keep Jekyll from touching files that ar
 
 The repo used to contain a `manifesto.md` — a long-form technical document that predated the essay. The essay replaced it. The manifesto is deleted. Don't bring it back, don't add a new one, and don't add references to it in `llms.txt` or anywhere else. If you find a stale link to `amplified.dev/manifesto`, remove it.
 
-### 6. Every File in the Repo Has a Job
+### 6. README Is Accurate for Humans and AI
+
+The README is the first thing a human sees on GitHub and the first thing an AI agent reads when exploring the repo. It must be honest and current. If the architecture changes, the README changes. If a dev setup step changes, the README changes.
+
+It should cover:
+- What the site is (one paragraph, no marketing)
+- Architecture (what files do what, how it's hosted)
+- Dev setup (accurate commands that actually work)
+- How to contribute (link to supporters.md edit)
+- That `.continue/checks/` exists and matters
+
+It should NOT contain:
+- Badges, shields, or status indicators
+- Marketing copy or feature lists
+- Instructions for a build system that doesn't exist
+- Links to pages that have been removed
+
+BAD: A README that says "Requires Ruby" and gives Jekyll commands when the main page is a static HTML file that needs no build step. A README that references a manifesto that was deleted.
+
+### 7. llms.txt and README Tell the Same Story
+
+The `llms.txt` and `README.md` both describe the project but for different audiences — `llms.txt` for AI agents discovering the site via URL, `README.md` for humans and agents on GitHub. They should agree on the facts: what the site is, what pages exist, how to contribute. If one is updated, check the other.
+
+### 8. Every File in the Repo Has a Job
 
 If you can't say what a file does in one sentence, it probably shouldn't be here. The inventory is small and should stay small:
 
@@ -55,6 +78,8 @@ If a file doesn't fit one of these categories, justify it or delete it.
 ## Key Files to Check
 
 - Root directory listing — no unexpected directories or files
+- `README.md` — accurate architecture, dev setup, and contribution instructions
+- `llms.txt` — in sync with README on facts
 - `_config.yml` — `exclude:` list is current
 - `.gitignore` — covers OS junk
 - `_layouts/` — only `supporters.html`
