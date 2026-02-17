@@ -20,6 +20,21 @@
       --sans: 'DM Sans', -apple-system, sans-serif;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    .skip-link {
+      position: absolute;
+      top: -3rem;
+      left: 1rem;
+      background: var(--lavender);
+      color: var(--cream);
+      padding: 0.5rem 1rem;
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      text-decoration: none;
+      border-radius: 2px;
+      z-index: 10000;
+      transition: top 0.2s ease;
+    }
+    .skip-link:focus { top: 1rem; }
     body {
       background: var(--cream);
       color: var(--ink);
@@ -101,7 +116,7 @@
       text-decoration: none;
       transition: color 0.3s ease;
     }
-    .names a:hover, .names a:focus-visible {
+    .page ul a:hover, .page ul a:focus-visible {
       color: var(--lavender);
     }
     .cta {
@@ -162,6 +177,7 @@
   </style>
 </head>
 <body>
+  <a href="#supporters" class="skip-link">Skip to content</a>
   <div class="page">
     <header>
       <p class="back"><a href="/">amplified.dev</a></p>
@@ -169,7 +185,9 @@
       <p class="subtitle">{{ content | split: '<li>' | size | minus: 1 }} people and counting</p>
     </header>
 
+    <div id="supporters">
     {{ content }}
+    </div>
 
     <div class="cta">
       <p><a href="https://github.com/continuedev/amplified.dev/edit/main/supporters.md">Add your name</a></p>
