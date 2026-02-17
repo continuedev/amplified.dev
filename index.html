@@ -429,34 +429,6 @@
       border-radius: 2px;
     }
 
-    .see-supporters {
-      margin-top: 1.2rem;
-      font-family: var(--sans);
-      font-size: 0.8rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-    }
-
-    .see-supporters a {
-      color: var(--ink-light);
-      text-decoration: none;
-      border-bottom: 1px solid var(--rule);
-      padding-bottom: 1px;
-      transition: border-color 0.3s ease, color 0.3s ease;
-    }
-
-    .see-supporters a:hover,
-    .see-supporters a:focus-visible {
-      color: var(--lavender);
-      border-bottom-color: var(--lavender);
-    }
-
-    .see-supporters a:focus-visible {
-      outline: 1.5px solid var(--lavender);
-      outline-offset: 3px;
-      border-radius: 2px;
-    }
-
     /* ─── Footer ─── */
     footer {
       text-align: center;
@@ -1106,11 +1078,12 @@
     <!-- No image after this. White space is the last image. -->
     <section class="closing">
       <p><em>If you believe in a future where developers are amplified, not automated,</em> <a href="https://github.com/continuedev/amplified.dev/edit/main/supporters.md" target="_blank" rel="noopener">add your name</a>.</p>
-      <p class="see-supporters"><a href="/supporters">See who's signed</a></p>
     </section>
 
     <footer>
       <a href="https://github.com/continuedev/amplified.dev">amplified.dev</a>
+      <span class="footer-sep">·</span>
+      <a href="/supporters">supporters</a>
       <span class="footer-sep">·</span>
       <a href="https://continue.dev">a Continue project</a>
     </footer>
