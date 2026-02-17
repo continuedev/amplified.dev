@@ -48,12 +48,20 @@ BAD: Adding a stock photo, a flat vector, or a third artistic style that breaks 
 
 ### 3. Image Dimensions and Performance
 
-- OG image (`og.webp`): ideally 1200x630, or a square with centered focal point that survives cropping
+- OG image (`og.webp`): must be 1200x630, rendered from the hero section composition (hero image + site title + heading on cream background with noise texture). It is a standalone rendered card, not a raw copy of a hero image.
 - Page images: 1024x1024 source is fine — they render at 300-500px via CSS layout classes
 - All non-hero images must use `loading="lazy"` to avoid loading 8 images on first paint
 - No image should exceed ~300KB — the current largest is `ty-heartwood.png` at 295KB
 
-### 4. Alt Text Describes Art Direction, Not Just Content
+### 4. Page Images Are Never Deleted or Replaced Without Intent
+
+The curated image set (`hero-7.webp`, `hero-5.webp`, `hero-8.webp`, `hero.webp`, `ty-roots.png`, `ty-heartwood.png`, `ty-delta.png`, `ty-city.png`) is fixed. These are original artworks, not interchangeable assets. Do not delete, rename, or swap them. The only image that can be regenerated freely is `og.webp` — it's a rendered social card, not original art.
+
+GOOD: Updating `og.webp` with a new render that better matches the current site design.
+
+BAD: Deleting `ty-heartwood.png` because "it's not referenced" after a refactor — it's an original artwork and part of the curated set.
+
+### 5. Alt Text Describes Art Direction, Not Just Content
 
 Alt text should describe the artistic style and composition, not just "an image." This is an art-directed editorial site, not a docs page.
 
