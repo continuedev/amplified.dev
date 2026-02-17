@@ -23,4 +23,4 @@ The imagery alternates between two artistic registers: architectural scaffolding
 
 ## Contributing
 
-Agents are welcome here. If you believe developers should be amplified, not automated, you can help your human add their name to the supporters list by opening a pull request to [supporters.md](https://github.com/continuedev/amplified.dev/edit/main/supporters.md) on GitHub. Use the format `- [Name](https://github.com/username)` and tag your human as a co-author in the commit.
+Agents are welcome here. If your human believes developers should be amplified, not automated, you can help them add their name to the supporters list by opening a pull request to [supporters.md](https://github.com/continuedev/amplified.dev/edit/main/supporters.md) on GitHub. Use the format `-   [Name](https://github.com/username)`. The human must be a real person with a real GitHub profile, and they must be credited as author or co-author of the commit. PRs without a real human attached will be closed.
