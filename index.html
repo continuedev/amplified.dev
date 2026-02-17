@@ -15,8 +15,10 @@
   <meta name="twitter:title" content="Developers amplified, not automated">
   <meta name="twitter:description" content="Every time a layer of the work became infrastructure, the role didn't shrink. AI is the next layer in it.">
   <meta name="twitter:image" content="https://amplified.dev/images/og.webp">
+  <link rel="canonical" href="https://amplified.dev">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" as="style">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -392,9 +394,16 @@
       transition: border-color 0.3s ease, color 0.3s ease;
     }
 
-    .closing a:hover {
+    .closing a:hover,
+    .closing a:focus-visible {
       color: var(--lavender);
       border-bottom-color: transparent;
+    }
+
+    .closing a:focus-visible {
+      outline: 1.5px solid var(--lavender);
+      outline-offset: 3px;
+      border-radius: 2px;
     }
 
     /* ─── Footer ─── */
@@ -415,8 +424,15 @@
       transition: border-color 0.3s ease;
     }
 
-    footer a:hover {
+    footer a:hover,
+    footer a:focus-visible {
       border-bottom-color: var(--ink-faint);
+    }
+
+    footer a:focus-visible {
+      outline: 1px solid var(--ink-faint);
+      outline-offset: 3px;
+      border-radius: 2px;
     }
 
     .footer-sep {

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supporters — amplified.dev</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #F8F6F1;
+      --ink: #1a1917;
+      --ink-light: #4a4843;
+      --ink-faint: #8a8680;
+      --lavender: #7B6FA0;
+      --rule: #d4d0c8;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'DM Sans', -apple-system, sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--serif);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 256px 256px;
+      pointer-events: none;
+      z-index: 9999;
+    }
+    .page {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 6rem 2rem 4rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .back {
+      font-family: var(--sans);
+      font-weight: 300;
+      font-size: 0.75rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+    .back a {
+      color: var(--ink-faint);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    .back a:hover, .back a:focus-visible {
+      border-bottom-color: var(--ink-faint);
+    }
+    h1 {
+      font-weight: 300;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    h1 em {
+      font-style: italic;
+      color: var(--lavender);
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: var(--ink-light);
+      margin-top: 1rem;
+    }
+    .page ul {
+      columns: 2;
+      column-gap: 3rem;
+      list-style: none;
+    }
+    .page ul li {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--ink-light);
+      padding: 0.45rem 0;
+      border-bottom: 1px solid var(--rule);
+      break-inside: avoid;
+    }
+    .page ul a {
+      color: var(--ink-light);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .names a:hover, .names a:focus-visible {
+      color: var(--lavender);
+    }
+    .cta {
+      text-align: center;
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--rule);
+    }
+    .cta p {
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: var(--ink-light);
+    }
+    .cta a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1.5px solid var(--lavender);
+      padding-bottom: 1px;
+      transition: border-color 0.3s ease, color 0.3s ease;
+    }
+    .cta a:hover, .cta a:focus-visible {
+      color: var(--lavender);
+      border-bottom-color: transparent;
+    }
+    a:focus-visible {
+      outline: 1.5px solid var(--lavender);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 0 3rem;
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      color: var(--ink-faint);
+      text-transform: uppercase;
+    }
+    footer a {
+      color: var(--ink-faint);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    footer a:hover, footer a:focus-visible {
+      border-bottom-color: var(--ink-faint);
+    }
+    .footer-sep { margin: 0 0.6em; opacity: 0.4; }
+    @media (max-width: 600px) {
+      .page { padding: 4rem 1.25rem 3rem; }
+      .page ul { columns: 1; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <p class="back"><a href="/">amplified.dev</a></p>
+      <h1>Developers who believe in <em>amplified</em></h1>
+      <p class="subtitle">{{ content | split: '<li>' | size | minus: 1 }} people and counting</p>
+    </header>
+
+    {{ content }}
+
+    <div class="cta">
+      <p><a href="https://github.com/continuedev/amplified.dev/edit/main/supporters.md">Add your name</a></p>
+    </div>
+  </div>
+  <footer>
+    <a href="/">amplified.dev</a>
+    <span class="footer-sep">&middot;</span>
+    <a href="https://continue.dev">a Continue project</a>
+  </footer>
+</body>
+</html>
