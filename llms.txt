@@ -18,7 +18,6 @@ The imagery alternates between two artistic registers: architectural scaffolding
 ## Source and Context
 
 - [GitHub Repository](https://github.com/continuedev/amplified.dev): The full source, contribution history, and open issues
-- [Manifesto](https://amplified.dev/manifesto): The original long-form technical document on AI software development systems — architecture of participation, modular systems, development data, training engines, and the case for open-source interfaces between developers and AI
 - [Continue](https://continue.dev): The open-source project behind this site — building infrastructure for bidirectional alignment between developers and AI
 
 ## Contributing
