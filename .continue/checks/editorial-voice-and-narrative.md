@@ -98,9 +98,11 @@ Each image break sits between sections as a visual pause — giving the reader t
 
 The 404 page and supporters page have their own copy, and it should feel like the same author wrote them. The 404 says "This page *moved up*" — a wink at the essay's thesis. The supporters page says "Developers who believe in *amplified*." These aren't throwaway strings. New pages or copy changes on secondary pages should maintain the same understated confidence and self-awareness.
 
-GOOD: A 404 that references the essay's language ("moved up") without over-explaining the joke.
+The goal is encounter, not explanation. Navigation elements should use the essay's own language, not generic labels. The footer links between pages say "essay" and "supporters" — plain nouns, lowercase, no verbs, no instructions. If a link needs a verb ("Read the essay," "View supporters," "Go back"), it's not in voice. The site trusts you to know what a word means.
 
-BAD: A 404 that says "Oops! Something went wrong. Please try again later." — generic, corporate, no personality.
+GOOD: A 404 that references the essay's language ("moved up") without over-explaining the joke. A footer that says "essay" to link to the essay.
+
+BAD: A 404 that says "Oops! Something went wrong. Please try again later." A link that says "Read the essay" or "Back to home" — generic, instructional, no personality.
 
 ## Key Files to Check
 
