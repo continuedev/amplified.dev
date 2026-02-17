@@ -34,7 +34,23 @@ PRs must have a real human credited as author or co-author. Agents are welcome t
 
 ## Checks
 
-The `.continue/checks/` directory contains AI-powered code review rules that run on every PR. They encode the site's design decisions — editorial voice, visual cohesion, accessibility, complexity resistance, and more. Read them before contributing.
+The `.continue/checks/` directory contains AI-powered code review rules that run on every PR. They encode the site's design decisions — the things that require judgment, not lint. Read them before contributing.
+
+| Check | What it protects |
+|---|---|
+| **Editorial Voice & Narrative Arc** | The essay's tone, structure, and the balance between conviction and openness |
+| **Visual Cohesion & Social Cards** | The two-register aesthetic and social card quality |
+| **Accessibility as Care** | The site works for everyone, not just developers on MacBook Pros |
+| **Keyboard Section Navigation** | j/k moves you through the essay. No UI, no indicators. If you know, you know |
+| **Easter Egg Integrity** | The secret delights without disrupting — invisible until found |
+| **No Product Creep** | The site stays an essay, not a product page |
+| **Supporters List Integrity** | Real people who put their name on something they believe in |
+| **Resist Complexity** | HTML, CSS, and images. That's the point |
+| **Deployment Architecture** | Compatible with the static site pipeline, no unnecessary build deps |
+| **Repo Hygiene** | No staging dirs, no dead layouts, no OS junk, no orphaned files |
+| **Check Quality** | The checks themselves — judgment-based, project-specific, never stale |
+
+Each check has a `Context` section explaining why it exists, numbered rules with GOOD/BAD examples, and an `Exclusions` section for things that are intentionally out of scope.
 
 ## Links
 
