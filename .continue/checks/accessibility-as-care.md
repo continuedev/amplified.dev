@@ -34,19 +34,42 @@ BAD: Adding a new CSS animation without a reduced-motion override.
 
 Every `<img>` must have an `alt` attribute that describes the artistic style and composition — not just "image" or empty string. These images carry meaning in the essay's argument. A screen reader user should understand what role the image plays. (See also: visual cohesion check, rule #5.)
 
-### 3. Keyboard Navigation Works Everywhere
+### 3. Skip-to-Content Link Exists
+
+The page must have a skip-to-content link as the first focusable element. It stays hidden until focused via keyboard, then appears at the top of the viewport. It links to `#essay` on the main content. This is how keyboard users bypass the hero section.
+
+GOOD:
+```html
+<a href="#essay" class="skip-link">Skip to content</a>
+```
+
+BAD: Removing the skip link, or placing interactive elements before it in the DOM.
+
+### 4. Keyboard Navigation Works Everywhere
 
 Every interactive element (links in the essay, the CTA, footer links) must be reachable via Tab and visually indicated with `:focus-visible` styles. The focus outlines use lavender (`--lavender`) to match the site palette. Don't add interactive elements without focus styles.
 
-### 4. Font Sizes Are Readable
+### 5. Font Sizes Are Readable
 
 The base font size is 18px on desktop, 16px on tablet. Body text is `1.15rem` with `line-height: 1.85`. These are intentionally generous for readability. Don't shrink body text below 1rem or reduce line-height below 1.6. The essay is meant to be read slowly — give the words room.
 
-### 5. Color Contrast Is Sufficient
+### 6. Color Contrast Is Sufficient
 
-Body text uses `--ink-light` (#4a4843) on `--cream` (#F8F6F1). This meets WCAG AA contrast requirements. The lavender accent (`--lavender`, #7B6FA0) is used for emphasis on large text (pull quotes, headings) where contrast requirements are lower. Don't use lavender for small body text — it's too light.
+Body text uses `--ink-light` (#4a4843) on `--cream` (#F8F6F1) — 8.46:1 contrast, passes WCAG AA. The lavender accent (`--lavender`, #7B6FA0) is used for emphasis on large text (pull quotes, headings) where contrast requirements are lower (3:1 for large text). Don't use lavender or `--ink-faint` for small body text — they're too light. The `.site-title` uses `--ink-light`, not `--ink-faint`, because at 0.75rem it needs the stronger contrast.
 
-### 6. The Supporters Page Is Also Accessible
+GOOD: `color: var(--ink-light)` for any text below 1.2rem.
+
+BAD: `color: var(--ink-faint)` on small text — only 3.35:1 contrast, fails AA for normal text.
+
+### 7. Decorative Elements Are Hidden from Assistive Technology
+
+Purely visual elements — the grid lines overlay, the noise texture, the easter egg message — must have `aria-hidden="true"` so screen readers skip them. If it doesn't convey content, it shouldn't be announced.
+
+GOOD: `<div class="grid-lines" aria-hidden="true"></div>`
+
+BAD: A decorative div with no `aria-hidden` that a screen reader tries to announce.
+
+### 8. The Supporters Page Is Also Accessible
 
 The supporters layout (`_layouts/supporters.html`) must maintain the same accessibility standards: readable font sizes, focus styles on all links, sufficient contrast, and reduced-motion support.
 

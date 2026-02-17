@@ -44,6 +44,26 @@
       mix-blend-mode: multiply;
     }
 
+    /* ─── Skip link ─── */
+    .skip-link {
+      position: absolute;
+      top: -3rem;
+      left: 1rem;
+      background: var(--lavender);
+      color: var(--cream);
+      padding: 0.5rem 1rem;
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      text-decoration: none;
+      border-radius: 2px;
+      z-index: 10000;
+      transition: top 0.2s ease;
+    }
+
+    .skip-link:focus {
+      top: 1rem;
+    }
+
     ::selection {
       background: rgba(123, 111, 160, 0.2);
     }
@@ -175,7 +195,7 @@
       font-size: 0.75rem;
       letter-spacing: 0.35em;
       text-transform: uppercase;
-      color: var(--ink-faint);
+      color: var(--ink-light);
       margin-bottom: 1.8rem;
       opacity: 0;
       animation: fadeUp 1s ease forwards 0.8s;
@@ -496,6 +516,21 @@
         transform: none;
         animation: none;
       }
+      body.amplified .section-text,
+      body.amplified .pull-quote,
+      body.amplified .hero h1,
+      body.amplified .site-title,
+      body.amplified .closing p {
+        transform: none;
+      }
+      body.amplified .hero h1 em,
+      body.amplified .pull-quote em {
+        text-shadow: none;
+      }
+      body.amplified .sep .dot {
+        transform: none;
+        box-shadow: none;
+      }
     }
 
     /* ─── Responsive ─── */
@@ -649,6 +684,52 @@
       }
     }
 
+    /* ─── Easter egg ─── */
+    body.amplified .section-text,
+    body.amplified .pull-quote,
+    body.amplified .hero h1,
+    body.amplified .site-title,
+    body.amplified .closing p {
+      transform: translateY(-4px);
+      transition: transform 0.9s cubic-bezier(0.23, 1, 0.32, 1),
+                  color 0.6s ease;
+    }
+
+    body.amplified .hero h1 em,
+    body.amplified .pull-quote em {
+      color: #6B5FD0;
+      text-shadow: 0 0 40px rgba(123, 111, 160, 0.35);
+      transition: color 0.6s ease, text-shadow 0.6s ease;
+    }
+
+    body.amplified .sep .dot {
+      transform: scale(1.8);
+      background: #6B5FD0;
+      box-shadow: 0 0 12px rgba(123, 111, 160, 0.5);
+      transition: all 0.6s ease;
+    }
+
+    .amplify-msg {
+      position: fixed;
+      bottom: 3rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--lavender);
+      opacity: 0;
+      transition: opacity 0.6s ease, transform 0.6s ease;
+      pointer-events: none;
+      z-index: 9998;
+    }
+
+    .amplify-msg.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
     /* Safe area for notched phones */
     @supports (padding: env(safe-area-inset-bottom)) {
       footer {
@@ -681,7 +762,8 @@
 </head>
 <body>
 
-  <div class="grid-lines" id="gridLines"></div>
+  <a href="#essay" class="skip-link">Skip to content</a>
+  <div class="grid-lines" id="gridLines" aria-hidden="true"></div>
 
   <div class="page">
 
@@ -703,7 +785,7 @@
     </header>
 
     <!-- ═══ ESSAY ═══ -->
-    <main class="essay">
+    <main class="essay" id="essay">
 
       <!-- ─── Section 1: The Landscape ─── -->
       <!-- Present tense. Chaos. The questions everyone's asking. -->
@@ -935,6 +1017,42 @@
     window.addEventListener('load', () => {
       document.getElementById('gridLines').classList.add('visible');
     });
+    // ─── Easter egg: type "amplify" ───
+    (function() {
+      var secret = 'amplify';
+      var buffer = '';
+      var msg = document.createElement('div');
+      msg.className = 'amplify-msg';
+      msg.setAttribute('aria-hidden', 'true');
+      msg.textContent = '\u2191 the work moves up';
+      document.body.appendChild(msg);
+
+      document.addEventListener('keydown', function(e) {
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) return;
+        if (e.metaKey || e.ctrlKey || e.altKey) return;
+        if (e.key.length !== 1) return;
+
+        buffer += e.key.toLowerCase();
+        if (buffer.length > secret.length) buffer = buffer.slice(-secret.length);
+
+        if (buffer === secret) {
+          buffer = '';
+          if (document.body.classList.contains('amplified')) return;
+          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+          document.body.classList.add('amplified');
+          msg.classList.add('show');
+
+          setTimeout(function() {
+            msg.classList.remove('show');
+          }, 2200);
+
+          setTimeout(function() {
+            document.body.classList.remove('amplified');
+          }, 2800);
+        }
+      });
+    })();
   </script>
 
 </body>
