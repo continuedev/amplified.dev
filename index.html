@@ -1059,29 +1059,19 @@
       if (window.innerWidth <= 768) return;
 
       var stops = Array.from(document.querySelectorAll('.hero, .essay .section, .essay .pull-quote, .closing'));
-      var currentIndex = 0;
       var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var scrollTarget = window.innerHeight * 0.2;
 
-      // Scroll tracking — keeps currentIndex in sync with viewport
-      var navObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            var index = stops.indexOf(entry.target);
-            if (index !== -1) {
-              currentIndex = index;
-            }
-          }
-        });
-      }, {
-        rootMargin: '-20% 0px -20% 0px',
-        threshold: 0.3
-      });
+      function currentStop() {
+        var best = 0;
+        var bestDist = Infinity;
+        for (var i = 0; i < stops.length; i++) {
+          var d = Math.abs(stops[i].getBoundingClientRect().top - scrollTarget);
+          if (d < bestDist) { bestDist = d; best = i; }
+        }
+        return best;
+      }
 
-      stops.forEach(function(el) {
-        navObserver.observe(el);
-      });
-
-      // Key handler
       document.addEventListener('keydown', function(e) {
         if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) return;
         if (e.metaKey || e.ctrlKey || e.altKey) return;
@@ -1089,16 +1079,16 @@
         var key = e.key.toLowerCase();
         if (key !== 'j' && key !== 'k') return;
 
-        if (key === 'j' && currentIndex < stops.length - 1) {
-          currentIndex++;
-        } else if (key === 'k' && currentIndex > 0) {
-          currentIndex--;
+        var index = currentStop();
+        if (key === 'j' && index < stops.length - 1) {
+          index++;
+        } else if (key === 'k' && index > 0) {
+          index--;
         } else {
           return;
         }
 
-        var rect = stops[currentIndex].getBoundingClientRect();
-        var targetY = window.pageYOffset + rect.top - (window.innerHeight * 0.2);
+        var targetY = window.pageYOffset + stops[index].getBoundingClientRect().top - scrollTarget;
         window.scrollTo({
           top: targetY,
           behavior: reducedMotion ? 'auto' : 'smooth'
