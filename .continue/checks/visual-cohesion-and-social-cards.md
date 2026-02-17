@@ -111,5 +111,4 @@ BAD:
 
 ## Exclusions
 
-- `manifesto.md` — Text-only content rendered by Jekyll's default layout (legacy)
 - CSS-only changes that don't add or swap images
