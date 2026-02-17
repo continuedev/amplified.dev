@@ -9,7 +9,7 @@ description: Guard against the site drifting from editorial essay toward product
 
 This site's power comes from what it is not. It is not a landing page. It is not a product announcement. It is not a funnel. It speaks as a peer developer to peer developers about something everyone in the industry is feeling but few are naming honestly.
 
-Continue is credited once, in the footer, as "a Continue project." The closing CTA links to GitHub, not a product page. There is no pricing, no feature list, no "get started" button, no analytics tracking, no newsletter signup. This restraint is what makes it credible. The moment the site starts selling something, it stops being the thing people want to share.
+Continue is credited once, in the footer, as "a Continue project." The footer also links to the supporters page — the only internal navigation on the site. The closing CTA links to GitHub, not a product page. There is no pricing, no feature list, no "get started" button, no analytics tracking, no newsletter signup. This restraint is what makes it credible. The moment the site starts selling something, it stops being the thing people want to share.
 
 The person who built this site distrusts optimization-speak even as he's fluent in it. He is aware that the great evils of the world are often the result of people trying to eliminate some other great evil — and that covert self-promotion disguised as thought leadership is one of those evils. The site should never become that.
 
@@ -41,7 +41,7 @@ There are no third-party analytics, no pixel tracking, no cookie banners, no ses
 
 ### 4. Footer Stays Minimal
 
-The footer contains two links: the repo and Continue. It does not contain social media icons, newsletter signups, legal boilerplate, or marketing language. If the footer grows beyond two lines, something has gone wrong.
+The footer contains three links: the repo, the supporters page, and Continue. It does not contain social media icons, newsletter signups, legal boilerplate, or marketing language. If the footer grows beyond two lines, something has gone wrong.
 
 ### 5. The llms.txt Is Honest, Not Optimized
 
@@ -56,3 +56,4 @@ The `llms.txt` describes what the site is and what it means. It is not keyword-s
 ## Exclusions
 
 - The footer link to `continue.dev` — this is a credited attribution, not a promotion
+- The footer link to `/supporters` — this is site content, not a product page

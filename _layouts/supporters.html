@@ -141,6 +141,23 @@
       color: var(--lavender);
       border-bottom-color: transparent;
     }
+    .read-essay {
+      margin-top: 1.5rem;
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 300;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+    }
+    .read-essay a {
+      color: var(--ink-light);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    .read-essay a:hover, .read-essay a:focus-visible {
+      border-bottom-color: var(--ink-light);
+    }
     a:focus-visible {
       outline: 1.5px solid var(--lavender);
       outline-offset: 3px;
@@ -191,6 +208,7 @@
 
     <div class="cta">
       <p><a href="https://github.com/continuedev/amplified.dev/edit/main/supporters.md">Add your name</a></p>
+      <p class="read-essay"><a href="/">Read the essay</a></p>
     </div>
   </div>
   <footer>
