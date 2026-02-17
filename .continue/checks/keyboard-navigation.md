@@ -39,9 +39,11 @@ Same guards, same reasons:
 
 If the easter egg's guards change, these change too.
 
-### 5. Scroll Tracking and Keyboard Stay in Sync
+### 5. Position Is Computed on Keypress, Not Tracked
 
-One `currentIndex`, written by both the IntersectionObserver and the keydown handler. If you scroll with the mouse and then press `j`, it continues from where you are. No second source of truth.
+There is no persistent `currentIndex` and no IntersectionObserver for scroll tracking. On each `j`/`k` press, the handler finds the stop closest to the scroll target line (20% from viewport top) and navigates from there. This means mouse scrolling and keyboard always agree — there's nothing to drift out of sync.
+
+BAD: An IntersectionObserver that writes to a `currentIndex` variable — when multiple stops are visible (especially near the bottom), the observer races and the index lands on the wrong stop.
 
 ### 6. Desktop Only
 
