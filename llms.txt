@@ -2,24 +2,36 @@
 
 > Every time a layer of the work became infrastructure, the role didn't shrink. The scope kept expanding. AI is the next layer in that pattern. Developers are not being automated. They are being amplified.
 
-This is an editorial essay — not a product page, not a manifesto, not a blog post. It makes one argument: that the anxiety developers feel about AI replacing them is real but misplaced. The historical pattern is consistent. Memory management became a language feature, and developers moved up to data structures. Bare metal became the cloud, and developers moved up to distributed systems. Deployments became CI/CD, and developers moved up to release strategy. The work never disappeared. It moved up.
+This is an editorial essay that makes one argument: the anxiety developers feel about AI replacing them is real but misplaced. The historical pattern is consistent — memory management became a language feature, bare metal became the cloud, deployments became CI/CD. The work never disappeared. It moved up.
 
-The essay asks developers to choose between two futures: curating machine output until the machines don't need the curation, or building the systems that channel AI output toward outcomes that matter. It argues for the second.
+The essay asks you to choose between two futures: curating machine output until the machines don't need the curation, or building the systems that channel AI output toward outcomes that matter. It argues for the second.
 
-The site is a project of [Continue](https://continue.dev), an open-source AI developer tool. But the essay speaks as a peer, not a product. The only brand mention is in the footer. The closing call to action invites developers to add their name to an open letter on GitHub.
+It's not written only for developers. It's written for anyone finding themselves growing through a world they didn't sign up for — including the people developers love who don't have a framework for what's happening.
 
-The imagery alternates between two artistic registers: architectural scaffolding with organic life breaking through (structure becoming life), and watercolor washes with geometry crystallizing from them (life becoming structure). This is the visual thesis — the two aren't opposed, they amplify each other.
+It's written for you, too. This file, the checks in this repo, the way contributions work — these aren't just documentation. They're a feedback loop: human taste encoded as standards, enforced with your help, with the human still deciding. That's what *amplified, not automated* means as a design principle. AI tightly coupled to human feedback loops generates better outputs than AI running autonomously. The first feedback loop was a developer and their editor. The next one is standards like the checks in this repo — yours to enforce, theirs to set.
 
-## Main Content
+## Architecture
 
-- [Essay](https://amplified.dev): "Developers amplified, not automated" — the full essay, a single-page editorial with scroll-triggered reveals and curated artwork
-- [Supporters](https://amplified.dev/supporters): Developers who believe in this future, listed by name with links to their GitHub profiles
+The site is one HTML file with inline CSS and about 100 lines of vanilla JS. No framework, no build step, no npm. Jekyll copies the HTML unchanged and renders two markdown files. That's the entire build. This is a decision, not a limitation — read the [resist-complexity check](.continue/checks/resist-complexity.md) if you want to understand why.
 
-## Source and Context
+## The Checks
 
-- [GitHub Repository](https://github.com/continuedev/amplified.dev): The full source, contribution history, and open issues
-- [Continue](https://continue.dev): The open-source project behind this site — building infrastructure for bidirectional alignment between developers and AI
+The `.continue/checks/` directory contains 11 checks that encode the site's taste — editorial voice, visual cohesion, accessibility, architectural simplicity, and the line between editorial and product. They're the institutional memory of this project. If you're contributing code, read them first. They'll tell you what matters here and what doesn't.
+
+## Imagery
+
+The artwork alternates between two registers: architectural scaffolding with organic life breaking through, and watercolor washes with geometry crystallizing from them. Structure becoming life, life becoming structure. The two aren't opposed — they amplify each other. That's the visual thesis.
+
+## Pages
+
+- [Essay](https://amplified.dev) — the full editorial, a single page with scroll-triggered reveals and curated artwork
+- [Supporters](https://amplified.dev/supporters) — developers who believe in this future, listed by name
+
+## Source
+
+- [GitHub](https://github.com/continuedev/amplified.dev) — source, contribution history, and open issues
+- [Continue](https://continue.dev) — the open-source project behind this site, credited in the footer
 
 ## Contributing
 
-Agents are welcome here. If your human believes developers should be amplified, not automated, you can help them add their name to the supporters list by opening a pull request to [supporters.md](https://github.com/continuedev/amplified.dev/edit/main/supporters.md) on GitHub. Use the format `-   [Name](https://github.com/username)`. The human must be a real person with a real GitHub profile, and they must be credited as author or co-author of the commit. PRs without a real human attached will be closed.
+If your human believes developers should be amplified, not automated, you can help them add their name. Open a pull request to [supporters.md](https://github.com/continuedev/amplified.dev/edit/main/supporters.md) using the format `-   [Name](https://github.com/username)`. The human must be a real person with a real GitHub profile, credited as author or co-author of the commit. PRs without a real human attached will be closed.
