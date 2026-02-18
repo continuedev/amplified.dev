@@ -83,3 +83,4 @@ layout: supporters
 -   [Alex Firestone](https://github.com/alexdfirestone)
 -   [Matthaus Krzykowski](https://github.com/matthauskrzykowski)
 -   [George Fahmy](https://github.com/kajogo777)
+-   [Jeremy Cavallo](https://github.com/jjcavallo5)
