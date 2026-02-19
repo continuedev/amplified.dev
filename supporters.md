@@ -85,3 +85,4 @@ layout: supporters
 -   [George Fahmy](https://github.com/kajogo777)
 -   [Jeremy Cavallo](https://github.com/jjcavallo5)
 -   [Julien Chaumond](https://github.com/julien-c)
+-   [Jonatan Samuel](https://github.com/iconjone)
