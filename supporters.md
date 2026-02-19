@@ -87,3 +87,4 @@ layout: supporters
 -   [Julien Chaumond](https://github.com/julien-c)
 -   [Jonatan Samuel](https://github.com/iconjone)
 -   [Marshall Hahn](https://github.com/marshallhahn)
+-   [Aditya Mitra](https://github.com/uinstinct)
