@@ -88,3 +88,4 @@ layout: supporters
 -   [Jonatan Samuel](https://github.com/iconjone)
 -   [Marshall Hahn](https://github.com/marshallhahn)
 -   [Aditya Mitra](https://github.com/uinstinct)
+-   [Rajat Tripathi](https://github.com/triprjt)
