@@ -91,4 +91,5 @@ layout: supporters
 -   [Rajat Tripathi](https://github.com/triprjt)
 -   [David Anderson](https://github.com/kataqatsi)
 -   [Abdul Wahab](https://github.com/abdul-wahab619)
--   [Tahsin Yazkan](https://github.com/thsnyzkn) 
+-   [Tahsin Yazkan](https://github.com/thsnyzkn)
+-   [elvis kahoro](https://github.com/elviskahoro)
