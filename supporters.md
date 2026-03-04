@@ -94,3 +94,4 @@ layout: supporters
 -   [Tahsin Yazkan](https://github.com/thsnyzkn)
 -   [elvis kahoro](https://github.com/elviskahoro)
 -   [Aleph Santos Oliveira](https://github.com/haple)
+-   [Jonathan Henrique](https://github.com/jonathanmdr)
