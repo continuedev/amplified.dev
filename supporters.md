@@ -92,4 +92,5 @@ layout: supporters
 -   [David Anderson](https://github.com/kataqatsi)
 -   [Abdul Wahab](https://github.com/abdul-wahab619)
 -   [Tahsin Yazkan](https://github.com/thsnyzkn)
+-   [elvis kahoro](https://github.com/elviskahoro)
 -   [Aleph Santos Oliveira](https://github.com/haple)
