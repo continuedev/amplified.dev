@@ -95,3 +95,4 @@ layout: supporters
 -   [elvis kahoro](https://github.com/elviskahoro)
 -   [Aleph Santos Oliveira](https://github.com/haple)
 -   [Jonathan Henrique](https://github.com/jonathanmdr)
+-   [Adam Krupa](https://github.com/pc-style)
