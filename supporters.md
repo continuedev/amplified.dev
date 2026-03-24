@@ -96,4 +96,5 @@ layout: supporters
 -   [Aleph Santos Oliveira](https://github.com/haple)
 -   [Jonathan Henrique](https://github.com/jonathanmdr)
 -   [Adam Krupa](https://github.com/pc-style)
+-   [oyedokunken](https://github.com/oyedokunken)
 -   [Alex Crocker](https://github.com/crock)
