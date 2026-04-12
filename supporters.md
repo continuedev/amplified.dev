@@ -98,3 +98,4 @@ layout: supporters
 -   [Adam Krupa](https://github.com/pc-style)
 -   [Alex Crocker](https://github.com/crock)
 -   [Ken LeFebvre](https://github.com/kenlefeb)
+-   [Rohit Bhadani](https://github.com/rbonweb)
