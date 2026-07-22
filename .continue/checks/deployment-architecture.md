@@ -7,13 +7,13 @@ description: Ensure changes are compatible with the static site pipeline and don
 
 ## Context
 
-This site is deployed via Netlify, which auto-detects Jekyll from the `Gemfile` and `_config.yml`, runs `jekyll build`, and serves the `_site/` output from the `main` branch. The custom domain `amplified.dev` is configured in the Netlify dashboard. There is no `netlify.toml` — everything is inferred.
+This site is deployed via GitHub Pages using the classic "Deploy from a branch" mode. GitHub Pages auto-detects Jekyll from the `Gemfile` and `_config.yml`, runs `jekyll build` (pinned via the `github-pages` gem), and serves the `_site/` output from the `main` branch. There is no GitHub Actions workflow — the build is handled entirely by GitHub Pages' native Jekyll pipeline. The custom domain `amplified.dev` is configured via the root `CNAME` file (and mirrored in the repo's Pages settings).
 
 The main page (`index.html`) is a fully standalone HTML file with inline CSS, inline JS, and no Jekyll dependencies. Jekyll merely copies it to `_site/` unchanged. The only file that uses Jekyll's markdown rendering is `supporters.md`.
 
 The image set is a mix of `.webp` (Nate's architectural pieces) and `.png` (Ty's watercolors) — all served as static files with no build-time processing.
 
-A migration to Vercel is planned, at which point the Jekyll dependency can be dropped entirely in favor of a zero-build static deploy.
+The long-term goal is a zero-build static deploy, at which point the Jekyll dependency can be dropped entirely.
 
 ## What to Check
 
@@ -59,11 +59,11 @@ BAD:
 
 ### 3. Every Push to Main Is a Production Deploy
 
-There is no staging environment or preview deploy. Every push to `main` triggers a production build on Netlify. Changes should be reviewed before merging to `main`, not after. This is especially important for image changes — a broken `og:image` reference means broken social cards immediately.
+There is no staging environment or preview deploy. Every push to `main` triggers a production build on GitHub Pages. Changes should be reviewed before merging to `main`, not after. This is especially important for image changes — a broken `og:image` reference means broken social cards immediately.
 
 ### 4. Keep the Build Minimal
 
-Don't add gems, plugins, or build steps to `Gemfile` or `_config.yml` unless they serve `supporters.md`. The goal is to eventually drop the build entirely. When the Vercel migration happens, the site should work by pointing Vercel at the repo root with no build command.
+Don't add gems, plugins, or build steps to `Gemfile` or `_config.yml` unless they serve `supporters.md`. The goal is to eventually drop the build entirely — a zero-build static deploy that serves the repo root with no build command.
 
 ### 5. Canonical URL and SEO Fundamentals
 

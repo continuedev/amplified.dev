@@ -9,7 +9,7 @@ description: The repo should only contain what the site needs. No staging direct
 
 This repo serves a single-page essay (`index.html`), a supporters list (`supporters.md` rendered by Jekyll), and a few supporting files. Everything else is either configuration, images, or discoverability files.
 
-The site used to be a GitHub Pages Jekyll project with a long-form manifesto. It's now a static site on Netlify with Jekyll only for `supporters.md`. The manifesto is gone — the essay replaced it. Remnants of the old architecture should not accumulate. When in doubt about whether a file belongs, the answer is almost always no.
+The site used to carry a long-form manifesto. It's now a mostly-static site on GitHub Pages with Jekyll only for `supporters.md`. The manifesto is gone — the essay replaced it. Remnants of the old architecture should not accumulate. When in doubt about whether a file belongs, the answer is almost always no.
 
 ## What to Check
 

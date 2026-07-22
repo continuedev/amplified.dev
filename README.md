@@ -11,7 +11,7 @@ The site is a project of [Continue](https://continue.dev). The essay speaks as a
 - **`index.html`** — The entire essay. Self-contained HTML with inline CSS and vanilla JS. No frameworks, no build step.
 - **`supporters.md`** — An open letter. Rendered by Jekyll using `_layouts/supporters.html`.
 - **`404.html`** — Custom error page.
-- **Hosted on Netlify.** Jekyll runs only to render `supporters.md`. Everything else is static.
+- **Hosted on GitHub Pages.** Jekyll runs only to render `supporters.md`. Everything else is static.
 
 ## Development
 
